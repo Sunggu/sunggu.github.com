@@ -27,7 +27,7 @@
  * Themes
  */
 
-@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 /*
  * Global resets
@@ -42,7 +42,7 @@ body {
 }
 
 html {
-  font-family: 'Jeju Gothic', "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: 'Nanum Gothic', "PT Serif", Georgia, "Times New Roman", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
