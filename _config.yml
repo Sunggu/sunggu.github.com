@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: false
 
 # Setup
-title:               Starkapin's home page
-tagline:             'starkapin'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:               Starkapin's page
+tagline:             'to live like a human being'
+description:         'Writer by <a href="https://starkapin.tistory.com/" target="_blank">@starkapin</a>.'
 url:                 'http://sunggu.github.io/'
 baseurl:             'http://sunggu.github.io/'
 paginate:            5
