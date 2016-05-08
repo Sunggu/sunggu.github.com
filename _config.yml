@@ -7,15 +7,15 @@ relative_permalinks: false
 # Setup
 title:               Starkapin's page
 tagline:             'to live like a human being'
-description:         'Write by <a href="https://starkapin.tistory.com/" target="_blank">@starkapin</a>.'
-url:                 'http://sunggu.github.io/'
-baseurl:             'http://sunggu.github.io/'
+description:         'Write by <a href="https://starkapin.tistory.com" target="_blank">@starkapin</a>.'
+url:                 'http://sunggu.github.io'
+baseurl:             'http://sunggu.github.io'
 paginate:            5
 
 # About/contact
 author:
   name:              Seungku Yu
-  url:               http://starkapin.tistory.com/
+  url:               http://starkapin.tistory.com
   email:             yuseungku@gmail.com
 
 # Custom vars
