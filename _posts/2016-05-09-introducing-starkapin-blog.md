@@ -8,6 +8,9 @@ Starkapin 블로그를 소개하는 포스트를 작성하고 있습니다.
 
 TEST BETA REAL
 
+TEST BETA REAL
+TEST BETA REAL
+
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
 ### Built on Poole
