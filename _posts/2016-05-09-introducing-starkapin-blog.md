@@ -5,6 +5,9 @@ title: Starkapin 블로그 소개글
 
 Starkapin 블로그를 소개하는 포스트를 작성하고 있습니다. 
 블로그를 오랜 기간 운영해봤지만 스크랩과 간단한 내용을 위주로 작성하다보니 기술적으로 남아있는게 없다고 판단되어 이번 기회에 좋은 내용으로 알차게 구성하고자 합니다.
+
+TEST BETA REAL
+
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
 ### Built on Poole
