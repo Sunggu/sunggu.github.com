@@ -9,6 +9,15 @@ body {
     margin: 0 auto;
     padding: 1.5rem 1.5rem;
     letter-spacing: -0.01em;
+    
+    /* 구형 기기 호환성 상자 모델 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* 제목 및 UI 요소에는 깔끔한 고딕체 적용 */
@@ -25,7 +34,7 @@ button,
     letter-spacing: -0.02em;
 }
 
-/* 사이트 헤더 컴팩트 레이아웃 */
+/* 사이트 헤더 컴팩트 레이아웃 (iPad mini 1세대 iOS 9 Safari 대응 Flexbox 접두사) */
 .site-header {
     margin-bottom: 2rem;
     padding-bottom: 0.8rem;
@@ -33,10 +42,21 @@ button,
 }
 
 .header-main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
-    flex-wrap: wrap; /* 모바일 뷰어 대응 */
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; /* 모바일 및 태블릿 대응 */
     gap: 10px;
 }
 
@@ -57,6 +77,9 @@ button,
 }
 
 #navigation {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     gap: 15px;
     margin: 0;
@@ -75,11 +98,22 @@ button,
 }
 
 .header-sub {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-top: 8px;
-    flex-wrap: wrap; /* 모바일 대응 */
     gap: 10px;
 }
 
@@ -106,6 +140,9 @@ button,
     font-size: 0.82rem;
     background-color: #fff !important;
     color: #333 !important;
+    /* iOS 기본 둥근 모서리 및 그림자 초기화 */
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 #search-input:focus {
@@ -130,6 +167,15 @@ button,
     max-height: 250px;
     overflow-y: auto;
     text-align: left;
+}
+
+/* ★ 중요: 검색 결과가 없을(비어있을) 때는 테두리와 그림자 등을 완전히 숨김 (구형 iOS 가로줄 버그 해결) */
+#results-container:empty {
+    display: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
 }
 
 #results-container li {
