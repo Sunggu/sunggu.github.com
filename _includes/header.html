@@ -1,27 +1,24 @@
-<header>
-    <h1 id="title">
-        <a href="{{ '/' | relative_url }}">{{site.title}}</a>
-    </h1>
-    <p id="description">
-        {{site.description}}
-    </p>
-
-    <hr/>
-    <nav id="navigation">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        /
-        {% assign nav_pages = site.pages | where_exp: 'p', 'p.title' | where_exp: 'p', 'p.nav_exclude != true' | sort: 'title' %}
-        {% for page in nav_pages %}
-            <a href="{{ page.url | relative_url }}">{{page.title}}</a>
-            /
-        {% endfor %}
-        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-    </nav>
-    <hr/>
-
-    <!-- 블로그 검색창 -->
-    <div id="search-container" style="margin: 15px 0;">
-        <input type="text" id="search-input" placeholder="블로그 검색..." style="width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem;">
-        <ul id="results-container" style="list-style-type: none; padding-left: 0; margin-top: 10px; max-height: 250px; overflow-y: auto;"></ul>
+<header class="site-header">
+    <div class="header-main">
+        <h1 id="title">
+            <a href="{{ '/' | relative_url }}">{{site.title}}</a>
+        </h1>
+        <nav id="navigation">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            {% assign nav_pages = site.pages | where_exp: 'p', 'p.title' | where_exp: 'p', 'p.nav_exclude != true' | sort: 'title' %}
+            {% for page in nav_pages %}
+                <a href="{{ page.url | relative_url }}">{{page.title}}</a>
+            {% endfor %}
+            <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </nav>
+    </div>
+    
+    <div class="header-sub">
+        <p id="description">{{site.description}}</p>
+        <!-- 블로그 검색창 -->
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="검색..." />
+            <ul id="results-container"></ul>
+        </div>
     </div>
 </header>

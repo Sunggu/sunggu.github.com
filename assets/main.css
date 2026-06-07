@@ -7,7 +7,7 @@ body {
     background-color: #f9f8f6 !important; /* 소설 뷰어 느낌의 부드러운 미색 배경 */
     max-width: 760px !important; /* 시선 이동 최소화 */
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     letter-spacing: -0.01em;
 }
 
@@ -25,13 +25,25 @@ button,
     letter-spacing: -0.02em;
 }
 
-/* 텍스트 정렬 및 제목 디자인 */
-h1,
-figcaption,
-#description,
-#navigation,
-#author h3 {
-    text-align: center;
+/* 사이트 헤더 컴팩트 레이아웃 */
+.site-header {
+    margin-bottom: 2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e0dfdb;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* 모바일 뷰어 대응 */
+    gap: 10px;
+}
+
+#title {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left;
 }
 
 #title a {
@@ -44,25 +56,95 @@ figcaption,
     text-decoration: underline;
 }
 
-#description {
-    color: #666;
-    font-size: 0.95rem;
-    margin-top: 5px;
-}
-
 #navigation {
-    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+    margin: 0;
 }
 
 #navigation a {
     font-weight: 500;
     color: #444;
     text-decoration: none;
-    margin: 0 5px;
+    font-size: 0.95rem;
 }
 
 #navigation a:hover {
     color: #1a5f5f;
+    text-decoration: underline;
+}
+
+.header-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    flex-wrap: wrap; /* 모바일 대응 */
+    gap: 10px;
+}
+
+#description {
+    color: #777;
+    font-size: 0.82rem;
+    margin: 0;
+    text-align: left;
+    max-width: 70%;
+}
+
+/* 검색창 스타일 개선 */
+#search-container {
+    position: relative;
+    width: 180px;
+    margin: 0;
+}
+
+#search-input {
+    width: 100%;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    background-color: #fff !important;
+    color: #333 !important;
+}
+
+#search-input:focus {
+    border-color: #1a5f5f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 95, 95, 0.3);
+}
+
+#results-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 280px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 100;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 5px;
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#results-container li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+#results-container li a {
+    color: #1a5f5f;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#results-container li a:hover {
     text-decoration: underline;
 }
 
@@ -106,16 +188,10 @@ blockquote {
     font-size: 0.95rem;
 }
 
-#h-card img {
-    float: left;
-    max-height: 120px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
 #h-card h3 {
     margin-top: 0;
     color: #333;
+    text-align: left;
 }
 
 footer {
@@ -129,37 +205,6 @@ footer {
 
 footer strong {
     font-weight: 400;
-}
-
-/* 검색창 스타일 개선 */
-#search-input {
-    font-family: 'Noto Sans KR', sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff !important;
-    color: #333 !important;
-}
-
-#search-input:focus {
-    border-color: #1a5f5f;
-    outline: none;
-    box-shadow: 0 0 5px rgba(26, 95, 95, 0.3);
-}
-
-#results-container li {
-    padding: 8px 12px;
-    border-bottom: 1px solid #eee;
-    font-size: 0.95rem;
-}
-
-#results-container li a {
-    color: #1a5f5f;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-#results-container li a:hover {
-    text-decoration: underline;
 }
 
 #pages {
