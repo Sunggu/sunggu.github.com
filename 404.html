@@ -1,10 +1,37 @@
 ---
+permalink: /404.html
 layout: default
-title: "404: Page not found"
-permalink: 404.html
 ---
 
-<div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ site.baseurl }}/">Head back home</a> to try finding it again.</p>
-</div>
+<main role="main" aria-labelledby="page-title">
+  <section class="not-found" style="text-align:center; max-width: 44rem; margin: 2rem auto;">
+    <h1 id="page-title">404 — Page not found</h1>
+    <p>
+      Sorry, the page you are looking for doesn’t exist or may have moved.
+    </p>
+
+    <nav aria-label="Helpful links" style="margin-top: 1.5rem;">
+      <p>
+        <a href="/">Return home</a>
+        ·
+        <a href="/tags">Browse tags</a>
+        ·
+        <a href="/sitemap.xml" rel="sitemap">Sitemap</a>
+      </p>
+    </nav>
+
+    <details>
+      <summary>Technical details</summary>
+      <p>
+        You requested URL: <code>{{ page.url | default: request.path }}</code>
+      </p>
+    </details>
+  </section>
+  <script>
+    // Enhance the technical details with current path if available (non-critical)
+    (function(){
+      var code = document.querySelector('details code');
+      if (code && window && window.location) { code.textContent = window.location.pathname; }
+    })();
+  </script>
+</main>

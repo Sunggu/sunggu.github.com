@@ -1,22 +1,53 @@
-# Permalinks
+# Welcome to Jekyll!
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: false
+# Site settings
+title: Starkapin's page
+email: yuseungku@gmail.com
+description: 'Write by <a href="https://starkapin.tistory.com" target="_blank">@starkapin</a>.'
+tagline: 'to live like a human being'
+baseurl: ""
+url: "https://sunggu.github.io"
+repository: Sunggu/sunggu.github.com
+github: Sunggu
 
-# Setup
-title:               Starkapin's page
-tagline:             'to live like a human being'
-description:         'Write by <a href="https://starkapin.tistory.com" target="_blank">@starkapin</a>.'
-url:                 'http://sunggu.github.io'
-baseurl:             'http://sunggu.github.io'
-paginate:            5
+google_analytics:
+comments: false
 
-# About/contact
-author:
-  name:              Seungku Yu
-  url:               http://starkapin.tistory.com
-  email:             yuseungku@gmail.com
+author: Seungku Yu
+author_bio: Starkapin's page - to live like a human being
+author_pic: ""
 
-# Custom vars
-version:             1.0.0
+paginate: 5
+paginate_path: "/:num/"
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+permalink: /:title
+
+theme_switcher: true
+
+# Allows all pages to be put into `_pages` folder
+# for easier navigation and better SEO.
+collections:
+  pages:
+    output: true
+    permalink: /:title
+
+# Exclude from processing.
+exclude:
+  - ".jekyll-cache"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "theme"
+  - "sandbox"
