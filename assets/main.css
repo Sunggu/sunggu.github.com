@@ -1,3 +1,31 @@
+/* 기본 가독성 중심 타이포그래피 설정 */
+body {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #2b2b2b;
+    background-color: #f9f8f6 !important; /* 소설 뷰어 느낌의 부드러운 미색 배경 */
+    max-width: 760px !important; /* 시선 이동 최소화 */
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+/* 제목 및 UI 요소에는 깔끔한 고딕체 적용 */
+h1, h2, h3, h4, h5, h6, 
+#description, 
+#navigation, 
+footer,
+input, 
+button,
+#results-container,
+#pages,
+#social {
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* 텍스트 정렬 및 제목 디자인 */
 h1,
 figcaption,
 #description,
@@ -6,45 +34,142 @@ figcaption,
     text-align: center;
 }
 
-h2 {
-    margin-bottom: 0px;
+#title a {
+    color: #1a5f5f; /* 정갈한 다크 틸(Teal) 톤 */
+    text-decoration: none;
+    font-weight: 700;
 }
 
-#title a {
-    color: darkcyan;
+#title a:hover {
+    text-decoration: underline;
+}
+
+#description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+#navigation {
+    margin: 15px 0;
 }
 
 #navigation a {
-    font-weight: bold;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    margin: 0 5px;
 }
 
+#navigation a:hover {
+    color: #1a5f5f;
+    text-decoration: underline;
+}
+
+/* 포스트 상세 페이지 가독성 향상 */
+.post h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.e-content {
+    margin-top: 2rem;
+}
+
+/* 문단 간 여백 - 소설 뷰어의 핵심 */
+.e-content p {
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    text-align: justify; /* 양쪽 정렬 */
+}
+
+/* 인용구 스타일 */
+blockquote {
+    border-left: 4px solid #1a5f5f;
+    padding-left: 20px;
+    margin: 1.5rem 0;
+    color: #555;
+    font-style: italic;
+    background-color: #f2f0eb;
+}
+
+/* 저자 및 푸터 */
 #h-card {
     overflow: auto;
-    padding: 0px 10px 15px;
+    padding: 20px;
+    background-color: #f2f0eb;
+    border-radius: 6px;
+    margin-top: 3rem;
+    font-size: 0.95rem;
 }
 
 #h-card img {
     float: left;
-    max-height: 150px;
-    margin-top: -10px;
-    padding-right: 15px;
+    max-height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 #h-card h3 {
-    margin-top: 5px;
+    margin-top: 0;
+    color: #333;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0dfdb;
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+}
+
+footer strong {
+    font-weight: 400;
+}
+
+/* 검색창 스타일 개선 */
+#search-input {
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff !important;
+    color: #333 !important;
+}
+
+#search-input:focus {
+    border-color: #1a5f5f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 95, 95, 0.3);
+}
+
+#results-container li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+#results-container li a {
+    color: #1a5f5f;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#results-container li a:hover {
+    text-decoration: underline;
 }
 
 #pages {
     text-align: center;
-    margin-top: 20px;
-}
-
-#current-page {
-    padding: 0px 15px;
+    margin-top: 30px;
 }
 
 #social {
     text-align: right;
+    margin-bottom: 10px;
 }
 
 /* ACCESSIBILITY */
@@ -61,17 +186,17 @@ a.skip-main {
 a.skip-main:focus,
 a.skip-main:active {
     color: #fff;
-    background-color: #000;
+    background-color: #1a5f5f;
     left: auto;
     top: auto;
     width: 30%;
     height: auto;
     overflow: auto;
     margin: 10px 35%;
-    padding: 5px;
-    border-radius: 15px;
-    border: 4px solid yellow;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid #fff;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1rem;
     z-index: 999;
 }

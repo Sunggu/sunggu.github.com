@@ -3,18 +3,23 @@
 # Site settings
 title: Starkapin's page
 email: yuseungku@gmail.com
-description: 'Write by <a href="https://starkapin.tistory.com" target="_blank">@starkapin</a>.'
-tagline: 'to live like a human being'
+description: "Starkapin의 개발 및 일상 기록 블로그입니다."
+tagline: "to live like a human being"
 baseurl: ""
 url: "https://binarygap.com"
 repository: Sunggu/sunggu.github.com
 github: Sunggu
+lang: ko
 
+# SEO & Analytics
+google_site_verification: "" # Google Search Console verification code
+naver_site_verification: ""  # Naver Webmaster Tools verification code
 google_analytics:
+
 comments: false
 
 author: Seungku Yu
-author_bio: Starkapin's page - to live like a human being
+author_bio: "Starkapin's page - to live like a human being"
 author_pic: ""
 
 paginate: 5
