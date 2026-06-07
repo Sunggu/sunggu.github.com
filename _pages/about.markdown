@@ -4,29 +4,26 @@ title: About
 permalink: /about/
 ---
 
-**Watery** is a minimalist, bare-bones theme for the popular JAMstack file-based CMS Jekyll that only uses the `<80kb` [**Water.css** framework](https://github.com/kognise/water.css) (hence the name!), while still following the best practices possible for accessibility and search-engine optimization.
+## Binarygap Log
 
-I created this because I wasn't able to find an up-to-date starter/skeleton theme for Jekyll. Even the default theme, Minima, uses the large Bootstrap framework.
+**Binarygap Log**는 한걸음 차근차근 걸어가며 눈앞의 간극(gap)을 메꾸듯이, 꾸준하고 성실하게 성장해 나가는 여정을 기록하는 공간입니다.
 
-This project is aimed towards those curious about using Jekyll for the first time, and want to build from as close to scratch as possible. Alternatively, it still has all the features required for creating a hassle-free, informational website or blog in just a few clicks.
+---
 
-As of November 1st, 2020, with over 100 posts on Watery, the website scores a perfect 100 in Performance, Accessibility, Best Practices, and SEO on an audit with [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse).
+### 운영자 Colin 소개
 
-### Features
+안녕하세요, 본 블로그를 운영하는 **Colin**입니다. 
 
-Despite Watery's minimalist nature, there are a few interesting features that have been added:
+저는 세상에 없던 무언가를 구상하고 설계하여 세상 밖으로 만들어내는 모든 일에 깊은 즐거움을 느낍니다. 
 
-- A fully customizable and empty `_BLANK_config.yml` to make getting up-and-running easy.
-- Having a `_pages` collection for easier organization.
-- Auto-generated links to newly created pages in the navigation.
-- An author bio at the end of each post. (Located in `_inclues/author.html`)
-- Full Rouge support for syntax highlighting. (Currently using `base16.solarized.light`)
-- Auto-generated RSS feed, sitemap, accessibility features, and search-engine optimization.
+최근에는 단순한 최종 결과물의 제작에 머무르기보다, 그 전 단계에서 일어나는 깊이 있는 **리서치**, 머릿속의 다채로운 **상상**, 그리고 그것을 구체화하는 **계획서 및 설계도**를 작성하는 기획과 설계의 과정에서 한층 더 큰 희열과 재미를 느끼고 있습니다.
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+### 블로그를 시작하는 이유
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+이 공간은 저의 지적 탐구와 창작의 즐거움을 차곡차곡 축적하고 다듬기 위해 만들어졌습니다. 
 
-[jekyll-organization]: https://github.com/jekyll
+- 머릿속 상상을 현실의 아이디어로 바꾸어 줄 **다양한 계획서**
+- 새로운 분야를 집요하게 탐색한 **리서치 기록**
+- 매일의 성장을 이어주는 **공부 및 기술 일지**
+
+한걸음씩 걸어가는 이 기록들이 누군가에게는 새로운 상상의 씨앗이 되고, 저에게는 성장해 나가는 간극을 훌륭히 채워줄 이정표가 되기를 바랍니다.
