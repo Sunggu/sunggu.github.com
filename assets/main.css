@@ -283,3 +283,37 @@ a.skip-main:active {
     font-size: 1rem;
     z-index: 999;
 }
+
+/* 텍스트 선택 시 하이라이트 및 가독성 개선 */
+::-moz-selection {
+    background-color: #1a5f5f;
+    color: #ffffff;
+}
+::selection {
+    background-color: #1a5f5f;
+    color: #ffffff;
+}
+
+/* 모바일 환경 대응 레이아웃 최적화 */
+@media screen and (max-width: 560px) {
+    body {
+        padding: 1rem 0.8rem;
+    }
+    #title {
+        font-size: 1.2rem;
+    }
+    #navigation {
+        margin-top: 6px;
+    }
+    #navigation a {
+        font-size: 0.82rem;
+        margin-left: 8px;
+    }
+    #description {
+        max-width: 55%;
+        font-size: 0.78rem;
+    }
+    #search-container {
+        width: 130px;
+    }
+}
