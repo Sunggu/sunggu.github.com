@@ -299,21 +299,57 @@ a.skip-main:active {
     body {
         padding: 1rem 0.8rem;
     }
+    .header-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
     #title {
-        font-size: 1.2rem;
+        float: none;
+        font-size: 1.4rem;
+        text-align: center;
     }
     #navigation {
-        margin-top: 6px;
+        float: none;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
     #navigation a {
-        font-size: 0.82rem;
-        margin-left: 8px;
+        font-size: 0.88rem;
+        margin-left: 0;
+    }
+    .header-sub {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
     }
     #description {
-        max-width: 55%;
-        font-size: 0.78rem;
+        float: none;
+        max-width: 100%;
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 0;
     }
     #search-container {
-        width: 130px;
+        float: none;
+        width: 100%;
+        max-width: 240px;
+        margin: 0;
+    }
+    #search-input {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    #results-container {
+        width: 100%;
+        left: 0;
+        right: 0;
     }
 }
