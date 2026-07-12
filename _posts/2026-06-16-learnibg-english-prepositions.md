@@ -1,9 +1,13 @@
 ---
+categories:
+- English
+- LearningLog
+date: 2026-06-16 12:00:00 +0900
 layout: post
-title: "[Learning Log] Essential English Prepositions for Developers"
-date: 2026-06-16 09:22:00 +0900
-categories: [English, LearningLog]
-tags: [prepositions, english-for-developers]
+tags:
+- prepositions
+- english-for-developers
+title: '[Learning Log] Essential English Prepositions for Developers'
 ---
 
 Understanding prepositions is not about memorizing Korean translations, but about visualizing their **spatial concepts**. Here is a clear guide to the most essential prepositions, tailored with tech-industry examples to help you intuitively master them.

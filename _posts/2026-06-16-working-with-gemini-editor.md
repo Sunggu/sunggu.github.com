@@ -1,7 +1,7 @@
 ---
 categories:
 - Writing
-date: 2026-07-12 12:00:00 +0900
+date: 2026-06-16 12:00:00 +0900
 layout: post
 tags:
 - editing

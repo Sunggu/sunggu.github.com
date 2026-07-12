@@ -1,8 +1,9 @@
 ---
-layout: post
-title: "How I Build My Managerial Intelligence: A Developer's Guide to Filtering Business Signals"
-date: 2026-06-14 19:30:00 +0900
 categories: learning-log, management
+date: 2026-06-14 12:00:00 +0900
+layout: post
+title: 'How I Build My Managerial Intelligence: A Developer''s Guide to Filtering
+  Business Signals'
 ---
 
 Early in my management journey, I treated AI as a mere copy editor—a tool to polish my drafts and make my reports sound more professional. However, I quickly realized the limitation: AI is only as good as the context it’s fed. When my data was sparse, the output was superficial.
