@@ -6,6 +6,7 @@ layout: post
 tags:
 - farm
 - simulation
+- universe-zero
 title: 방구석 농장 경영
 ---
 

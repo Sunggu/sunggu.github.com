@@ -6,6 +6,7 @@ layout: post
 tags:
 - fantasy
 - modern-fantasy
+- universe-zero
 title: 김씨 이야기 - 집을 계약하다
 ---
 
