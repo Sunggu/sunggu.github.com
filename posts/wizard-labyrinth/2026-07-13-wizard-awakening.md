@@ -11,7 +11,7 @@ title: 마법사의 미궁 설정 - 마법사로서의 각성
 series: "마법사의 미궁 설정"
 series_order: 1
 ---
-[마법사의 미궁]({% post_url 2026-07-13-wizards-labyrinth %})
+[마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-wizards-labyrinth %})
 
 마법사로서 각성하기 위한 조건은 신비를 경험 할 때이다.
 이 신비로움이라는 것은 사람마다 다르다.

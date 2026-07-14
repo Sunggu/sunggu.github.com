@@ -11,7 +11,7 @@ title: 김씨 이야기 - 미궁 만들기를 시작하다
 series: "김씨 이야기"
 series_order: 5
 ---
-[마법사의 미궁]({% post_url 2026-07-13-wizards-labyrinth %}) [김씨 이야기]({% post_url 2026-07-13-story-of-mr-kim %})
+[마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-wizards-labyrinth %}) [김씨 이야기]({% post_url kim-story/2026-07-13-story-of-mr-kim %})
 
 강력한 욕구나 욕망이 이처럼 뚜렷한 적은 없었다. 
 
