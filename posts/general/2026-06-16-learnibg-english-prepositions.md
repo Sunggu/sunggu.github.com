@@ -22,11 +22,11 @@ Think of **IN** as being surrounded by a 3D container, a defined area, or a spec
 
 ### Developer Examples
 * **Languages & Mediums:** 
-  * "Please write the commit message **in** English." *(English is the medium/framework)*
-  * "The backend is written **in** TypeScript."
+ * "Please write the commit message **in** English." *(English is the medium/framework)*
+ * "The backend is written **in** TypeScript."
 * **Data & Code:**
-  * "The user data is stored **in** the database."
-  * "You can find the configuration **in** the root directory."
+ * "The user data is stored **in** the database."
+ * "You can find the configuration **in** the root directory."
 
 ---
 
@@ -38,11 +38,11 @@ Think of **ON** as 2D contact (touching a surface) or being active on a network,
 
 ### Developer Examples
 * **UI & Web:**
-  * "Click the button **on** the screen."
-  * "The documentation is hosted **on** GitHub Pages."
+ * "Click the button **on** the screen."
+ * "The documentation is hosted **on** GitHub Pages."
 * **Infrastructure & Platforms:**
-  * "We deploy our workers **on** Cloudflare."
-  * "The local server is running **on** port 8080."
+ * "We deploy our workers **on** Cloudflare."
+ * "The local server is running **on** port 8080."
 
 ---
 
@@ -54,10 +54,10 @@ Think of **AT** as a sharp pin on a map or a precise coordinate. It focuses on t
 
 ### Developer Examples
 * **Coordinates & Specific Positions:**
-  * "The application crashed **at** line 42."
-  * "Fetch the profile data **at** this API endpoint."
+ * "The application crashed **at** line 42."
+ * "Fetch the profile data **at** this API endpoint."
 * **Time & Status:**
-  * "The cron job triggers **at** midnight."
+ * "The cron job triggers **at** midnight."
 
 ---
 
@@ -69,10 +69,10 @@ Think of **BY** as "near something" or "through the mechanism of something." It 
 
 ### Developer Examples
 * **Mechanism & Authentication:**
-  * "The data is filtered **by** the AI model."
-  * "Users can authenticate **by** signing in with Google."
+ * "The data is filtered **by** the AI model."
+ * "Users can authenticate **by** signing in with Google."
 * **Authorship:**
-  * "This open-source project was created **by** Seunggu."
+ * "This open-source project was created **by** Seunggu."
 
 ---
 
@@ -84,10 +84,10 @@ Think of **WITH** as holding a tool in your hand, or things moving together in p
 
 ### Developer Examples
 * **Tools & Dependencies:**
-  * "Build the project **with** the latest version of Node.js."
-  * "I compiled the local code **with** Ollama."
+ * "Build the project **with** the latest version of Node.js."
+ * "I compiled the local code **with** Ollama."
 * **Features & Bundles:**
-  * "A technical blog designed **with** a clean, typography-focused layout."
+ * "A technical blog designed **with** a clean, typography-focused layout."
 
 ---
 

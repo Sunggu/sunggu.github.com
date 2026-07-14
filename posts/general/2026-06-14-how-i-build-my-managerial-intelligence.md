@@ -3,7 +3,7 @@ categories: learning-log, management
 date: 2026-06-14 12:00:00 +0900
 layout: post
 title: 'How I Build My Managerial Intelligence: A Developer''s Guide to Filtering
-  Business Signals'
+ Business Signals'
 ---
 
 Early in my management journey, I treated AI as a mere copy editor—a tool to polish my drafts and make my reports sound more professional. However, I quickly realized the limitation: AI is only as good as the context it’s fed. When my data was sparse, the output was superficial.
@@ -14,9 +14,9 @@ Recently, with the emergence of more capable AI models and better data infrastru
 I realized that as a manager, it is humanly impossible to monitor every detail. My goal was to build a system that aggregates scattered signals—Jira tickets, GitHub PRs, meeting notes, and chat logs—into a coherent narrative.
 
 Here’s how I structured it:
-*   **Data Extraction:** Used **MCP (Model Context Protocol)** to pull data into my environment.
-*   **Standardization:** Converted everything into JSON format for easier AI parsing.
-*   **Connection:** This was the toughest part. Manually connecting the dots between Jira tickets and actual progress was difficult due to gaps in our internal workflows. 
+* **Data Extraction:** Used **MCP (Model Context Protocol)** to pull data into my environment.
+* **Standardization:** Converted everything into JSON format for easier AI parsing.
+* **Connection:** This was the toughest part. Manually connecting the dots between Jira tickets and actual progress was difficult due to gaps in our internal workflows. 
 
 ### The Managerial "Aha!" Moment
 The data collection was time-consuming and admittedly imperfect. But once the pipeline was in place, the turnaround time for generating insights dropped drastically.
