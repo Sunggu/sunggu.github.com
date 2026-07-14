@@ -568,3 +568,172 @@ a.skip-main:active {
         max-width: 100%;
     }
 }
+
+/* 본문 내 이미지 가독성 및 양쪽 정렬 찢어짐 해결 */
+.e-content img {
+    display: block;
+    margin: 2.5rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 홈 화면 연재 시리즈 섹션 */
+.home-series-section {
+    margin-bottom: 4rem;
+}
+
+.home-series-section .section-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a5f5f;
+    margin-bottom: 1.8rem;
+    border-bottom: 2px solid #1a5f5f;
+    padding-bottom: 0.5rem;
+}
+
+.series-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.8rem;
+}
+
+.home-series-card {
+    background: #ffffff;
+    border: 1px solid #e6e2da;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-series-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(26, 95, 95, 0.08);
+    border-color: #1a5f5f;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #f2eee6;
+    padding-bottom: 0.8rem;
+}
+
+.card-emoji {
+    font-size: 1.8rem;
+}
+
+.card-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-count {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #1a5f5f;
+    background: #e2efef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 0.2rem;
+}
+
+.card-title {
+    margin: 0 !important;
+    font-size: 1.15rem !important;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.card-episodes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.card-episodes li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #f2eee6;
+    font-size: 0.9rem;
+}
+
+.card-episodes li:last-child {
+    border-bottom: none;
+}
+
+.ep-num {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888;
+    background: #f2eee6;
+    padding: 1px 5px;
+    border-radius: 3px;
+    min-width: 32px;
+    text-align: center;
+}
+
+.ep-title {
+    color: #444;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.ep-title:hover {
+    color: #1a5f5f;
+    text-decoration: underline;
+}
+
+.card-footer {
+    margin-top: auto;
+    border-top: 1px solid #f2eee6;
+    padding-top: 0.8rem;
+    text-align: right;
+}
+
+.read-first-btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a5f5f;
+    text-decoration: none;
+}
+
+.read-first-btn:hover {
+    text-decoration: underline;
+}
+
+/* 최신 글 목록 섹션 타이틀 */
+.recent-posts-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin: 3.5rem 0 1.5rem 0;
+    border-bottom: 1px solid #e0dfdb;
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .series-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -5,6 +5,57 @@ layout: default
 <div>
     {{ content }}
 
+    <!-- 연재 소설 시리즈 보드 추가 -->
+    {% assign all_series_posts = site.posts | where_exp: "item", "item.series != nil" %}
+    {% assign series_names = all_series_posts | map: "series" | uniq %}
+
+    {% if series_names.size > 0 %}
+        <div class="home-series-section">
+            <h2 class="section-title">📚 연재 소설 시리즈</h2>
+            <div class="series-cards-grid">
+                {% for s_name in series_names %}
+                    {% assign s_posts = site.posts | where: "series", s_name | sort: "series_order" %}
+                    {% assign first_post = s_posts | first %}
+                    {% assign total_eps = s_posts | size %}
+                    
+                    {% assign s_emoji = "📖" %}
+                    {% if s_name == "김씨 이야기" %}{% assign s_emoji = "🪄" %}{% endif %}
+                    {% if s_name == "방구석 농장 경영" %}{% assign s_emoji = "🌱" %}{% endif %}
+                    {% if s_name == "마법사의 미궁 설정" %}{% assign s_emoji = "🌀" %}{% endif %}
+                    {% if s_name == "달기지의 셰르파 설정집" %}{% assign s_emoji = "🚀" %}{% endif %}
+                    {% if s_name == "바이킹 세계 최고의 드래곤" %}{% assign s_emoji = "🐉" %}{% endif %}
+
+                    <div class="home-series-card">
+                        <div class="card-header">
+                            <span class="card-emoji">{{ s_emoji }}</span>
+                            <div class="card-meta">
+                                <span class="card-count">총 {{ total_eps }}화 연재 중</span>
+                                <h3 class="card-title">{{ s_name }}</h3>
+                            </div>
+                        </div>
+                        
+                        <ul class="card-episodes">
+                            {% for sp in s_posts %}
+                                <li>
+                                    <span class="ep-num">{{ sp.series_order }}화</span>
+                                    <a href="{{ sp.url | relative_url }}" class="ep-title">{{ sp.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        
+                        {% if first_post %}
+                            <div class="card-footer">
+                                <a href="{{ first_post.url | relative_url }}" class="read-first-btn">1화부터 읽기 ➔</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    <h2 class="recent-posts-title">📝 최근 게시글 목록</h2>
+
     {% if site.paginate %}
         {% assign posts = paginator.posts %}
     {% else %}
