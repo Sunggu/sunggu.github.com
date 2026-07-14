@@ -7,7 +7,8 @@ permalink: /novels/
 <div class="narou-portal-container">
     <h2 class="narou-portal-title">연재 소설 목록</h2>
 
-    {% assign novel_pages = site.pages | where: "layout", "novel-main" | sort: "title" %}
+    {% assign all_novels = site.pages | where: "layout", "novel-main" %}
+    {% assign novel_pages = all_novels | sort: "title" %}
     {% for np in novel_pages %}
         {% assign episodes = site.posts | where: "series", np.novel_series | sort: "series_order" %}
         {% assign total_eps = episodes | size %}
@@ -26,7 +27,7 @@ permalink: /novels/
             </div>
 
             <div class="narou-item-synopsis">
-                {{ np.content | strip_html | truncate: 180 }}
+                {{ np.description | escape | truncate: 180 }}
             </div>
 
             {% if last_ep %}

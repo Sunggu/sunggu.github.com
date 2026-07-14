@@ -19,7 +19,11 @@ layout: default
     <div class="narou-synopsis-box">
         <h3 class="narou-synopsis-title">시놉시스 / 작품 소개</h3>
         <div class="narou-synopsis-content">
-            {{ content }}
+            {% if page.description %}
+                <p>{{ page.description }}</p>
+            {% else %}
+                {{ content }}
+            {% endif %}
         </div>
     </div>
 
@@ -27,7 +31,8 @@ layout: default
     <div class="narou-index-section">
         <h3 class="narou-index-title">에피소드 목차</h3>
         
-        {% assign episodes = site.posts | where: "series", page.novel_series | sort: "series_order" %}
+        {% assign raw_episodes = site.posts | where: "series", page.novel_series %}
+        {% assign episodes = raw_episodes | sort: "series_order" %}
         {% assign ep_size = episodes | size %}
 
         {% if ep_size > 0 %}
