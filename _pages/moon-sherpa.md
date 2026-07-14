@@ -5,6 +5,7 @@ author: "Colin"
 genre: "SF / 우주 연대기 설정집"
 novel_series: "달기지의 셰르파 설정집"
 permalink: /novels/moon-sherpa/
+nav_exclude: true
 ---
 거대한 은하의 흑역사 '여신 전쟁(Goddess War)'의 그늘에 은폐된 인류 대통합 연맹사,
 그리고 달기지 깊은 곳 '지성체의 요람'을 수호하는 베테랑 구급대원 출신의 셰르파 이야기.

@@ -5,6 +5,7 @@ author: "Colin"
 genre: "경영 시뮬레이션 / 힐링"
 novel_series: "방구석 농장 경영"
 permalink: /novels/corner-farm/
+nav_exclude: true
 ---
 방구석 좁은 베란다와 창틀에서 무럭무럭 자라는 상추와 콩.
 제한된 공간에서 식물을 가꾸고 경영하는 소소한 힐링 안내서이자,

@@ -5,65 +5,6 @@ layout: default
 <div>
     {{ content }}
 
-    <!-- 최근 업데이트 소설 TOP 3 보드 -->
-    {% assign recent_novels = "" | split: "," %}
-    {% for post in site.posts %}
-        {% if post.series %}
-            {% unless recent_novels contains post.series %}
-                {% assign recent_novels = recent_novels | push: post.series %}
-            {% endunless %}
-            {% if recent_novels.size >= 3 %}
-                {% break %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-
-    {% if recent_novels.size > 0 %}
-        <div class="home-series-section">
-            <h2 class="section-title">최근 업데이트 소설</h2>
-            {% for s_name in recent_novels %}
-                {% assign s_posts = site.posts | where: "series", s_name | sort: "series_order" %}
-                {% assign first_post = s_posts | first %}
-                {% assign total_eps = s_posts | size %}
-
-                {% assign main_url = "/" %}
-                {% if s_name == "김씨 이야기" %}{% assign main_url = "/novels/kim-story/" %}{% endif %}
-                {% if s_name == "방구석 농장 경영" %}{% assign main_url = "/novels/corner-farm/" %}{% endif %}
-                {% if s_name == "마법사의 미궁 설정" %}{% assign main_url = "/novels/wizard-labyrinth/" %}{% endif %}
-                {% if s_name == "달기지의 셰르파 설정집" %}{% assign main_url = "/novels/moon-sherpa/" %}{% endif %}
-                {% if s_name == "바이킹 세계 최고의 드래곤" %}{% assign main_url = "/novels/viking-dragon/" %}{% endif %}
-
-                <div class="narou-series-box">
-                    <div class="narou-series-header">
-                        <h3 class="narou-series-title">
-                            <a href="{{ main_url | relative_url }}">{{ s_name }}</a>
-                        </h3>
-                        <span class="narou-series-meta">총 {{ total_eps }}화 연재 중</span>
-                    </div>
-                    
-                    <table class="narou-episodes-table">
-                        <tbody>
-                            {% for sp in s_posts %}
-                                <tr>
-                                    <td class="narou-ep-order">{{ sp.series_order }}화</td>
-                                    <td class="narou-ep-title">
-                                        <a href="{{ sp.url | relative_url }}">{{ sp.title }}</a>
-                                    </td>
-                                    <td class="narou-ep-date">
-                                        {%- assign date_format = site.minima.date_format | default: "%Y/%m/%d" -%}
-                                        {{ sp.date | date: date_format }}
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-            {% endfor %}
-        </div>
-    {% endif %}
-
-    <h2 class="recent-posts-title">최근 게시글 목록</h2>
-
     {% if site.paginate %}
         {% assign posts = paginator.posts %}
     {% else %}
