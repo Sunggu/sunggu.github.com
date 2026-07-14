@@ -5,26 +5,38 @@ layout: default
 <div>
     {{ content }}
 
-    <!-- 연재 소설 시리즈 보드 추가 -->
-    {% assign all_series_posts = site.posts | where_exp: "item", "item.series != nil" %}
-    {% assign series_names = all_series_posts | map: "series" | uniq %}
+    <!-- 최근 업데이트 소설 TOP 3 보드 -->
+    {% assign recent_novels = "" | split: "," %}
+    {% for post in site.posts %}
+        {% if post.series %}
+            {% unless recent_novels contains post.series %}
+                {% assign recent_novels = recent_novels | push: post.series %}
+            {% endunless %}
+            {% if recent_novels.size >= 3 %}
+                {% break %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
 
-    {% if series_names.size > 0 %}
+    {% if recent_novels.size > 0 %}
         <div class="home-series-section">
-            <h2 class="section-title">연재 소설 시리즈</h2>
-            {% for s_name in series_names %}
+            <h2 class="section-title">최근 업데이트 소설</h2>
+            {% for s_name in recent_novels %}
                 {% assign s_posts = site.posts | where: "series", s_name | sort: "series_order" %}
                 {% assign first_post = s_posts | first %}
                 {% assign total_eps = s_posts | size %}
 
+                {% assign main_url = "/" %}
+                {% if s_name == "김씨 이야기" %}{% assign main_url = "/novels/kim-story/" %}{% endif %}
+                {% if s_name == "방구석 농장 경영" %}{% assign main_url = "/novels/corner-farm/" %}{% endif %}
+                {% if s_name == "마법사의 미궁 설정" %}{% assign main_url = "/novels/wizard-labyrinth/" %}{% endif %}
+                {% if s_name == "달기지의 셰르파 설정집" %}{% assign main_url = "/novels/moon-sherpa/" %}{% endif %}
+                {% if s_name == "바이킹 세계 최고의 드래곤" %}{% assign main_url = "/novels/viking-dragon/" %}{% endif %}
+
                 <div class="narou-series-box">
                     <div class="narou-series-header">
                         <h3 class="narou-series-title">
-                            {% if first_post %}
-                                <a href="{{ first_post.url | relative_url }}">{{ s_name }}</a>
-                            {% else %}
-                                {{ s_name }}
-                            {% endif %}
+                            <a href="{{ main_url | relative_url }}">{{ s_name }}</a>
                         </h3>
                         <span class="narou-series-meta">총 {{ total_eps }}화 연재 중</span>
                     </div>

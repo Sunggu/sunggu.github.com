@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            {% if page.author %}
+                <span>작가: {{ page.author }}</span>
+            {% endif %}
+            {% if page.genre %}
+                <span> | 장르: {{ page.genre }}</span>
+            {% endif %}
+        </p>
+    </header>
+
+    <!-- 소설 설명 및 시놉시스 영역 -->
+    <div class="narou-synopsis-box">
+        <h3 class="narou-synopsis-title">시놉시스 / 작품 소개</h3>
+        <div class="narou-synopsis-content">
+            {{ content }}
+        </div>
+    </div>
+
+    <!-- 에피소드 목차 영역 -->
+    <div class="narou-index-section">
+        <h3 class="narou-index-title">에피소드 목차</h3>
+        
+        {% assign episodes = site.posts | where: "series", page.novel_series | sort: "series_order" %}
+        {% assign ep_size = episodes | size %}
+
+        {% if ep_size > 0 %}
+            <table class="narou-episodes-table">
+                <tbody>
+                    {% for ep in episodes %}
+                        <tr>
+                            <td class="narou-ep-order">{{ ep.series_order }}화</td>
+                            <td class="narou-ep-title">
+                                <a href="{{ ep.url | relative_url }}">{{ ep.title }}</a>
+                            </td>
+                            <td class="narou-ep-date">
+                                {%- assign date_format = site.minima.date_format | default: "%Y/%m/%d" -%}
+                                {{ ep.date | date: date_format }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="narou-no-episodes">등록된 에피소드가 없습니다.</p>
+        {% endif %}
+    </div>
+</article>
+
+<style>
+/* 소설 메인 뷰어 전용 스타일 추가 */
+.narou-synopsis-box {
+    border: 1px solid #ccc;
+    background: #faf8f5;
+    padding: 1.2rem;
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+.narou-synopsis-title {
+    margin-top: 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    color: #111;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.narou-synopsis-content {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.narou-index-section {
+    margin-top: 3rem;
+}
+
+.narou-index-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #222;
+    border-bottom: 2px solid #222;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.narou-no-episodes {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+</style>
