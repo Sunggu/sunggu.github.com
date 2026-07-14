@@ -12,37 +12,41 @@ layout: default
     {% if series_names.size > 0 %}
         <div class="home-series-section">
             <h2 class="section-title">연재 소설 시리즈</h2>
-            <div class="series-cards-grid">
-                {% for s_name in series_names %}
-                    {% assign s_posts = site.posts | where: "series", s_name | sort: "series_order" %}
-                    {% assign first_post = s_posts | first %}
-                    {% assign total_eps = s_posts | size %}
+            {% for s_name in series_names %}
+                {% assign s_posts = site.posts | where: "series", s_name | sort: "series_order" %}
+                {% assign first_post = s_posts | first %}
+                {% assign total_eps = s_posts | size %}
 
-                    <div class="home-series-card">
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="card-count">총 {{ total_eps }}화 연재 중</span>
-                                <h3 class="card-title">{{ s_name }}</h3>
-                            </div>
-                        </div>
-                        
-                        <ul class="card-episodes">
-                            {% for sp in s_posts %}
-                                <li>
-                                    <span class="ep-num">{{ sp.series_order }}화</span>
-                                    <a href="{{ sp.url | relative_url }}" class="ep-title">{{ sp.title }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                        
-                        {% if first_post %}
-                            <div class="card-footer">
-                                <a href="{{ first_post.url | relative_url }}" class="read-first-btn">1화부터 읽기 ➔</a>
-                            </div>
-                        {% endif %}
+                <div class="narou-series-box">
+                    <div class="narou-series-header">
+                        <h3 class="narou-series-title">
+                            {% if first_post %}
+                                <a href="{{ first_post.url | relative_url }}">{{ s_name }}</a>
+                            {% else %}
+                                {{ s_name }}
+                            {% endif %}
+                        </h3>
+                        <span class="narou-series-meta">총 {{ total_eps }}화 연재 중</span>
                     </div>
-                {% endfor %}
-            </div>
+                    
+                    <table class="narou-episodes-table">
+                        <tbody>
+                            {% for sp in s_posts %}
+                                <tr>
+                                    <td class="narou-ep-order">{{ sp.series_order }}화</td>
+                                    <td class="narou-ep-title">
+                                        <a href="{{ sp.url | relative_url }}">{{ sp.title }}</a>
+                                    </td>
+                                    <td class="narou-ep-date">
+                                        {%- assign date_format = site.minima.date_format | default: "%Y/%m/%d" -%}
+                                        {{ sp.date | date: date_format }}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% endfor %}
         </div>
     {% endif %}
 
