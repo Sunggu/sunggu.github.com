@@ -2,6 +2,7 @@
 layout: page
 title: Docs
 permalink: /documentation/
+nav_exclude: true
 ---
 
 ## Installation
