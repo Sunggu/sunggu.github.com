@@ -408,8 +408,11 @@ a.skip-main:active {
 }
 
 .series-navigation {
-    /* 구형 브라우저 호환성을 위해 flex 대신 block + float/inline-block 혹은 margin 정렬 제공 */
-    margin-bottom: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 0.8rem 0;
     clear: both;
 }
 
@@ -421,66 +424,46 @@ a.skip-main:active {
 
 .series-nav-btn {
     display: block;
-    width: 48%;
-    padding: 0.8rem;
-    background: #fff;
-    border: 1px solid #ccc;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.88rem;
+    color: #002c53 !important;
     text-decoration: none !important;
-    color: #333;
-    font-size: 0.85rem;
-    float: left;
     box-sizing: border-box;
 }
 
-.series-nav-btn.next {
-    float: right;
+.series-nav-btn.prev {
+    width: 30%;
+    float: left;
+    text-align: left;
 }
 
-.series-nav-btn:hover:not(.disabled) {
-    border-color: #111;
-    background: #f4f4f4;
+.series-nav-btn.list-main {
+    width: 40%;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+
+.series-nav-btn.next {
+    width: 30%;
+    float: right;
+    text-align: right;
 }
 
 .series-nav-btn.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background: #eee;
-    color: #888;
+    color: #999 !important;
+    cursor: default;
 }
 
 .nav-arrow {
     font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.nav-text {
-    display: block;
-}
-
-.series-nav-btn.prev .nav-text {
-    text-align: left;
-    margin-left: 0.2rem;
-}
-
-.series-nav-btn.next .nav-text {
-    text-align: right;
-    margin-right: 0.2rem;
-}
-
-.nav-label {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.7rem;
-    color: #777;
-    font-weight: 600;
-    display: block;
-}
-
-.nav-title {
-    font-weight: 700;
-    margin-top: 0.15rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+.nav-text-span {
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .series-list-details {
@@ -616,16 +599,16 @@ a.skip-main:active {
 
 .narou-series-box {
     border: 1px solid #ccc;
-    background: #faf8f5; /* 부드러운 미색 */
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    background: #ffffff; /* 순수 흰색 */
+    padding: 1.2rem;
+    margin-bottom: 1.8rem;
     box-sizing: border-box;
 }
 
 .narou-series-header {
-    border-bottom: 1px solid #bbb;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #111; /* 명확한 경계 분리 */
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
     clear: both;
 }
 
@@ -681,10 +664,10 @@ a.skip-main:active {
 .narou-ep-order {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    color: #666;
+    color: #555;
     width: 55px;
     text-align: center;
-    background: #faf8f5;
+    background: #ffffff; /* 회색 음영 제거 */
     border-right: 1px solid #e5e2db;
 }
 

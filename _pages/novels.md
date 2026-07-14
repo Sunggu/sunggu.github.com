@@ -5,8 +5,6 @@ permalink: /novels/
 ---
 
 <div class="narou-portal-container">
-    <h2 class="narou-portal-title">연재 소설 목록</h2>
-
     {% assign all_novels = site.pages | where: "layout", "novel-main" %}
     {% assign novel_pages = all_novels | sort: "title" %}
     {% for np in novel_pages %}
