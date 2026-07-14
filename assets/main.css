@@ -66,7 +66,7 @@ button,
 }
 
 #title a {
-    color: #1a5f5f; /* 정갈한 다크 틸(Teal) 톤 */
+    color: #111111; /* 정갈한 딥 블랙 */
     text-decoration: none;
     font-weight: 700;
 }
@@ -93,7 +93,7 @@ button,
 }
 
 #navigation a:hover {
-    color: #1a5f5f;
+    color: #002c53;
     text-decoration: underline;
 }
 
@@ -135,9 +135,9 @@ button,
 }
 
 #search-input:focus {
-    border-color: #1a5f5f;
+    border-color: #002c53;
     outline: none;
-    box-shadow: 0 0 5px rgba(26, 95, 95, 0.3);
+    box-shadow: 0 0 5px rgba(0, 44, 83, 0.3);
 }
 
 #results-container {
@@ -174,7 +174,7 @@ button,
 }
 
 #results-container li a {
-    color: #1a5f5f;
+    color: #002c53;
     font-weight: 500;
     text-decoration: none;
 }
@@ -205,7 +205,7 @@ button,
 
 /* 인용구 스타일 */
 blockquote {
-    border-left: 4px solid #1a5f5f;
+    border-left: 4px solid #333333;
     padding-left: 20px;
     margin: 1.5rem 0;
     color: #555;
@@ -269,7 +269,7 @@ a.skip-main {
 a.skip-main:focus,
 a.skip-main:active {
     color: #fff;
-    background-color: #1a5f5f;
+    background-color: #002c53;
     left: auto;
     top: auto;
     width: 30%;
@@ -286,11 +286,11 @@ a.skip-main:active {
 
 /* 텍스트 선택 시 하이라이트 및 가독성 개선 */
 ::-moz-selection {
-    background-color: #1a5f5f;
+    background-color: #002c53;
     color: #ffffff;
 }
 ::selection {
-    background-color: #1a5f5f;
+    background-color: #002c53;
     color: #ffffff;
 }
 
@@ -357,148 +357,159 @@ a.skip-main:active {
 /* 시리즈(연결고리) 네비게이션 컴포넌트 */
 .series-container {
     margin: 3.5rem 0 2rem 0;
-    padding: 1.8rem;
-    background: #fdfcfa;
-    border: 1px solid #e2ded5;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    background: #faf8f5; /* 부드러운 신문지 미색 배경 */
+    border: 1px solid #ccc; /* 얇은 회색 실선 */
+    border-radius: 0; /* 둥근 모서리 제거로 인쇄물 느낌 극대화 */
 }
 
 .series-header {
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #1a5f5f;
-    padding-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #333; /* 검은색/어두운 회색 실선 */
+    padding-bottom: 0.6rem;
 }
 
 .series-emoji {
-    font-size: 1.3rem;
-    margin-right: 6px;
+    font-size: 1.2rem;
+    margin-right: 4px;
     vertical-align: middle;
 }
 
 .series-label {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 700;
-    color: #1a5f5f;
+    color: #333;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .series-title {
-    margin: 0.4rem 0 0 0 !important;
-    font-size: 1.35rem !important;
+    margin: 0.3rem 0 0 0 !important;
+    font-size: 1.25rem !important;
     font-weight: 700;
-    color: #2c3e50;
+    color: #111;
 }
 
 .series-navigation {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    /* 구형 브라우저 호환성을 위해 flex 대신 block + float/inline-block 혹은 margin 정렬 제공 */
+    margin-bottom: 1.2rem;
+    clear: both;
+}
+
+.series-navigation:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .series-nav-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
+    display: block;
+    width: 48%;
+    padding: 0.8rem;
     background: #fff;
-    border: 1px solid #e6e2da;
-    border-radius: 6px;
+    border: 1px solid #ccc;
     text-decoration: none !important;
-    color: inherit;
-    transition: all 0.2s ease;
+    color: #333;
+    font-size: 0.85rem;
+    float: left;
+    box-sizing: border-box;
+}
+
+.series-nav-btn.next {
+    float: right;
 }
 
 .series-nav-btn:hover:not(.disabled) {
-    border-color: #1a5f5f;
-    background: #f5f8f8;
-    box-shadow: 0 2px 8px rgba(26, 95, 95, 0.08);
+    border-color: #111;
+    background: #f4f4f4;
 }
 
 .series-nav-btn.disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    background: #f7f6f2;
+    background: #eee;
+    color: #888;
 }
 
 .nav-arrow {
-    font-size: 1.2rem;
-    color: #1a5f5f;
-    padding: 0 0.5rem;
+    font-weight: bold;
 }
 
 .nav-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 .series-nav-btn.prev .nav-text {
     text-align: left;
-    margin-left: 0.5rem;
+    margin-left: 0.2rem;
 }
 
 .series-nav-btn.next .nav-text {
     text-align: right;
-    margin-right: 0.5rem;
+    margin-right: 0.2rem;
 }
 
 .nav-label {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.72rem;
-    color: #888;
+    font-size: 0.7rem;
+    color: #777;
     font-weight: 600;
+    display: block;
 }
 
 .nav-title {
-    font-size: 0.9rem;
     font-weight: 700;
-    margin-top: 0.2rem;
+    margin-top: 0.15rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 250px;
+    display: block;
 }
 
 .series-list-details {
-    border: 1px solid #e8e4db;
-    border-radius: 6px;
+    border: 1px solid #ccc;
     background: #fff;
+    margin-top: 0.5rem;
 }
 
 .series-list-summary {
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 0.8rem;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.88rem;
+    font-size: 0.82rem;
     font-weight: 600;
-    color: #555;
+    color: #444;
     cursor: pointer;
-    outline: none;
+    background: #faf8f5;
     user-select: none;
 }
 
 .series-list-summary:hover {
-    color: #1a5f5f;
-    background: #faf9f6;
+    color: #111;
+    background: #eee;
 }
 
 .series-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    border-top: 1px solid #e8e4db;
+    border-top: 1px solid #ccc;
     max-height: 250px;
     overflow-y: auto;
 }
 
 .series-item {
-    display: flex;
-    align-items: center;
-    padding: 0.7rem 1rem;
-    border-bottom: 1px solid #f2eee6;
-    font-size: 0.88rem;
+    display: block;
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+    clear: both;
+}
+
+.series-item:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .series-item:last-child {
@@ -506,170 +517,177 @@ a.skip-main:active {
 }
 
 .series-item.active {
-    background: #f5f8f8;
+    background: #f4f4f4;
 }
 
 .item-order {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    color: #888;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
-}
-
-.series-item.active .item-order {
-    background: #1a5f5f;
-    color: #fff;
+    color: #555;
+    float: left;
+    margin-right: 8px;
 }
 
 .item-title {
-    flex: 1;
-    color: #444;
+    color: #002c53; /* 소설가가 되자 특유의 푸른색 링크 느낌 */
     text-decoration: none;
-    font-weight: 500;
+    float: left;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .item-title.current {
     font-weight: 700;
-    color: #1a5f5f;
+    color: #111;
 }
 
 .item-title:hover {
     text-decoration: underline;
-    color: #1a5f5f;
 }
 
 .item-badge {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 700;
-    color: #1a5f5f;
-    background: #e2efef;
-    padding: 2px 6px;
-    border-radius: 4px;
+    color: #111;
+    background: #ddd;
+    padding: 1px 4px;
+    float: right;
 }
 
 @media screen and (max-width: 560px) {
-    .series-container {
-        padding: 1.2rem;
+    .series-nav-btn {
+        width: 100%;
+        float: none;
+        margin-bottom: 0.5rem;
     }
-    .series-navigation {
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-    .nav-title {
-        max-width: 100%;
+    .series-nav-btn.next {
+        float: none;
+        margin-bottom: 0;
     }
 }
 
-/* 본문 내 이미지 가독성 및 양쪽 정렬 찢어짐 해결 */
+/* 본문 내 이미지 가독성 및 양쪽 정렬 찢어짐 해결 (신문 스크랩 일러스트 스타일) */
 .e-content img {
     display: block;
     margin: 2.5rem auto;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #bbb;
+    padding: 6px;
+    background: #fff;
+    box-shadow: none; /* 그림자 완전 제거 */
+    border-radius: 0; /* 둥근 모서리 제거 */
 }
 
 /* 홈 화면 연재 시리즈 섹션 */
 .home-series-section {
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 .home-series-section .section-title {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.45rem;
     font-weight: 700;
-    color: #1a5f5f;
-    margin-bottom: 1.8rem;
-    border-bottom: 2px solid #1a5f5f;
-    padding-bottom: 0.5rem;
+    color: #222;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #222;
+    padding-bottom: 0.4rem;
 }
 
 .series-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.8rem;
+    /* 구형 브라우저 호환성을 위해 grid 대신 float 레이아웃 및 box-sizing 활용 */
+    width: 100%;
+}
+
+.series-cards-grid:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .home-series-card {
     background: #ffffff;
-    border: 1px solid #e6e2da;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #ccc;
+    border-radius: 0; /* 둥근 모서리 제거 */
+    padding: 1.2rem;
+    box-shadow: none; /* 그림자 제거 */
+    box-sizing: border-box;
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 1.5rem;
+    min-height: 280px;
+}
+
+.home-series-card:nth-child(2n) {
+    margin-right: 0;
 }
 
 .home-series-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(26, 95, 95, 0.08);
-    border-color: #1a5f5f;
+    border-color: #333;
+    background: #faf8f5;
 }
 
 .card-header {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 1.2rem;
-    border-bottom: 1px solid #f2eee6;
-    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.6rem;
+}
+
+.card-header:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .card-emoji {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    float: left;
+    margin-right: 8px;
 }
 
 .card-meta {
-    display: flex;
-    flex-direction: column;
+    float: left;
+    max-width: 80%;
 }
 
 .card-count {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    color: #1a5f5f;
-    background: #e2efef;
-    padding: 2px 6px;
-    border-radius: 4px;
-    align-self: flex-start;
-    margin-bottom: 0.2rem;
+    color: #444;
+    background: #e6e6e6;
+    padding: 1px 4px;
+    display: inline-block;
+    margin-bottom: 0.15rem;
 }
 
 .card-title {
     margin: 0 !important;
-    font-size: 1.15rem !important;
+    font-size: 1.05rem !important;
     font-weight: 700;
-    color: #2c3e50;
+    color: #111;
+    line-height: 1.3;
 }
 
 .card-episodes {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem 0;
-    flex-grow: 1;
-    max-height: 180px;
+    margin: 0 0 1.2rem 0;
+    height: 140px;
     overflow-y: auto;
+    border: 1px solid #eee;
+    background: #fafafa;
 }
 
 .card-episodes li {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.4rem 0;
-    border-bottom: 1px dashed #f2eee6;
-    font-size: 0.9rem;
+    padding: 0.35rem 0.6rem;
+    border-bottom: 1px dashed #ddd;
+    font-size: 0.85rem;
 }
 
 .card-episodes li:last-child {
@@ -678,42 +696,35 @@ a.skip-main:active {
 
 .ep-num {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    color: #888;
-    background: #f2eee6;
-    padding: 1px 5px;
-    border-radius: 3px;
-    min-width: 32px;
-    text-align: center;
+    color: #666;
+    background: #eee;
+    padding: 1px 4px;
+    margin-right: 6px;
 }
 
 .ep-title {
-    color: #444;
+    color: #002c53;
     text-decoration: none;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-grow: 1;
 }
 
 .ep-title:hover {
-    color: #1a5f5f;
     text-decoration: underline;
 }
 
 .card-footer {
-    margin-top: auto;
-    border-top: 1px solid #f2eee6;
-    padding-top: 0.8rem;
+    border-top: 1px solid #eee;
+    padding-top: 0.6rem;
     text-align: right;
+    margin-top: auto;
 }
 
 .read-first-btn {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    color: #1a5f5f;
+    color: #002c53;
     text-decoration: none;
 }
 
@@ -724,16 +735,20 @@ a.skip-main:active {
 /* 최신 글 목록 섹션 타이틀 */
 .recent-posts-title {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    color: #333;
-    margin: 3.5rem 0 1.5rem 0;
-    border-bottom: 1px solid #e0dfdb;
-    padding-bottom: 0.5rem;
+    color: #222;
+    margin: 3rem 0 1.2rem 0;
+    border-bottom: 2px solid #222;
+    padding-bottom: 0.4rem;
+    clear: both;
 }
 
 @media screen and (max-width: 768px) {
-    .series-cards-grid {
-        grid-template-columns: 1fr;
+    .home-series-card {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        min-height: auto;
     }
 }
