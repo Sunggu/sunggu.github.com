@@ -353,3 +353,218 @@ a.skip-main:active {
         right: 0;
     }
 }
+
+/* 시리즈(연결고리) 네비게이션 컴포넌트 */
+.series-container {
+    margin: 3.5rem 0 2rem 0;
+    padding: 1.8rem;
+    background: #fdfcfa;
+    border: 1px solid #e2ded5;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.series-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #1a5f5f;
+    padding-bottom: 0.8rem;
+}
+
+.series-emoji {
+    font-size: 1.3rem;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.series-label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1a5f5f;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.series-title {
+    margin: 0.4rem 0 0 0 !important;
+    font-size: 1.35rem !important;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.series-navigation {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.series-nav-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #e6e2da;
+    border-radius: 6px;
+    text-decoration: none !important;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.series-nav-btn:hover:not(.disabled) {
+    border-color: #1a5f5f;
+    background: #f5f8f8;
+    box-shadow: 0 2px 8px rgba(26, 95, 95, 0.08);
+}
+
+.series-nav-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f7f6f2;
+}
+
+.nav-arrow {
+    font-size: 1.2rem;
+    color: #1a5f5f;
+    padding: 0 0.5rem;
+}
+
+.nav-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.series-nav-btn.prev .nav-text {
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+.series-nav-btn.next .nav-text {
+    text-align: right;
+    margin-right: 0.5rem;
+}
+
+.nav-label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.72rem;
+    color: #888;
+    font-weight: 600;
+}
+
+.nav-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+.series-list-details {
+    border: 1px solid #e8e4db;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.series-list-summary {
+    padding: 0.8rem 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.series-list-summary:hover {
+    color: #1a5f5f;
+    background: #faf9f6;
+}
+
+.series-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #e8e4db;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.series-item {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #f2eee6;
+    font-size: 0.88rem;
+}
+
+.series-item:last-child {
+    border-bottom: none;
+}
+
+.series-item.active {
+    background: #f5f8f8;
+}
+
+.item-order {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #888;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.series-item.active .item-order {
+    background: #1a5f5f;
+    color: #fff;
+}
+
+.item-title {
+    flex: 1;
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.item-title.current {
+    font-weight: 700;
+    color: #1a5f5f;
+}
+
+.item-title:hover {
+    text-decoration: underline;
+    color: #1a5f5f;
+}
+
+.item-badge {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #1a5f5f;
+    background: #e2efef;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 560px) {
+    .series-container {
+        padding: 1.2rem;
+    }
+    .series-navigation {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    .nav-title {
+        max-width: 100%;
+    }
+}

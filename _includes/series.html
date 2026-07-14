@@ -1,0 +1,90 @@
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "series_order" %}
+  {% assign series_count = series_posts | size %}
+
+  {% if series_count > 1 %}
+    {% assign prev_post = nil %}
+    {% assign next_post = nil %}
+    {% assign current_found = false %}
+    {% assign current_index = 0 %}
+
+    {% for sp in series_posts %}
+      {% if sp.url == page.url %}
+        {% assign current_found = true %}
+        {% assign current_index = forloop.index %}
+      {% else %}
+        {% if current_found == false %}
+          {% assign prev_post = sp %}
+        {% else %}
+          {% assign next_post = sp %}
+          {% break %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="series-container">
+      <div class="series-header">
+        <span class="series-emoji">✨</span>
+        <span class="series-label">연재 시리즈 목록</span>
+        <h3 class="series-title">「{{ page.series }}」</h3>
+      </div>
+      
+      <div class="series-navigation">
+        {% if prev_post %}
+          <a href="{{ prev_post.url | relative_url }}" class="series-nav-btn prev">
+            <span class="nav-arrow">←</span>
+            <div class="nav-text">
+              <span class="nav-label">이전 에피소드</span>
+              <span class="nav-title">{{ prev_post.title }}</span>
+            </div>
+          </a>
+        {% else %}
+          <div class="series-nav-btn prev disabled">
+            <span class="nav-arrow">←</span>
+            <div class="nav-text">
+              <span class="nav-label">이전 에피소드</span>
+              <span class="nav-title">첫 번째 이야기입니다</span>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if next_post %}
+          <a href="{{ next_post.url | relative_url }}" class="series-nav-btn next">
+            <div class="nav-text">
+              <span class="nav-label">다음 에피소드</span>
+              <span class="nav-title">{{ next_post.title }}</span>
+            </div>
+            <span class="nav-arrow">→</span>
+          </a>
+        {% else %}
+          <div class="series-nav-btn next disabled">
+            <div class="nav-text">
+              <span class="nav-label">다음 에피소드</span>
+              <span class="nav-title">마지막 이야기입니다</span>
+            </div>
+            <span class="nav-arrow">→</span>
+          </div>
+        {% endif %}
+      </div>
+
+      <details class="series-list-details">
+        <summary class="series-list-summary">
+          <span>전체 목차 보기 ({{ current_index }} / {{ series_count }})</span>
+        </summary>
+        <ul class="series-list">
+          {% for sp in series_posts %}
+            <li class="series-item {% if sp.url == page.url %}active{% endif %}">
+              <span class="item-order">{{ sp.series_order }}</span>
+              {% if sp.url == page.url %}
+                <span class="item-title current">{{ sp.title }}</span>
+                <span class="item-badge">현재 글</span>
+              {% else %}
+                <a href="{{ sp.url | relative_url }}" class="item-title">{{ sp.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </details>
+    </div>
+  {% endif %}
+{% endif %}
