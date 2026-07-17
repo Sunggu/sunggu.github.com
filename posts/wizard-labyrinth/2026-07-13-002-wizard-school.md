@@ -9,7 +9,7 @@ tags:
 - world-building
 title: 마법사의 미궁 설정 - 마법사 학교
 series: "마법사의 미궁 설정"
-series_order: 2
+series_order: 120
 ---
 [마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-003-wizards-labyrinth %})
 

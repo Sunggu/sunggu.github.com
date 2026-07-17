@@ -9,7 +9,7 @@ tags:
 - universe-zero
 title: 김씨 이야기
 series: "마법사의 미궁 설정"
-series_order: 7
+series_order: 170
 ---
 [마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-003-wizards-labyrinth %}) [김씨 이야기]({% post_url wizard-labyrinth/2026-07-13-007-story-of-mr-kim %})
 

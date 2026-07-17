@@ -9,7 +9,7 @@ tags:
 - fiction
 title: The strongest dragon in the viking world (Chap. 3)
 series: "The strongest dragon in the viking world"
-series_order: 3
+series_order: 130
 ---
 ## Chapter 3
  

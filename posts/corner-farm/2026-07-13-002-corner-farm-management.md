@@ -9,7 +9,7 @@ tags:
 - universe-zero
 title: 방구석 농장 경영
 series: "방구석 농장 경영"
-series_order: 1
+series_order: 110
 ---
 
 ## 방구석농장경영

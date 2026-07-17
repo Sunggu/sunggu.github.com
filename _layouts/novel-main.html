@@ -39,8 +39,17 @@ layout: default
             <table class="narou-episodes-table">
                 <tbody>
                     {% for ep in episodes %}
+                        {%- assign _chap = ep.series_order | divided_by: 100 -%}
+                        {%- assign _rem = ep.series_order | modulo: 100 -%}
+                        {%- if _rem == 0 and ep.no_episode_number -%}
+                        <tr class="narou-chapter-divider">
+                            <td class="narou-chapter-order" colspan="3">제{{ _chap }}장 {{ ep.title }}</td>
+                        </tr>
+                        {%- else -%}
+                        {%- assign _sec = _rem | divided_by: 10 -%}
+                        {%- assign _sub = _rem | modulo: 10 -%}
                         <tr>
-                            <td class="narou-ep-order">{{ ep.series_order }}화</td>
+                            <td class="narou-ep-order">{% if _sub > 0 %}{{ _chap }}-{{ _sec }}-{{ _sub }}{% else %}{{ _chap }}-{{ _sec }}{% endif %}</td>
                             <td class="narou-ep-title">
                                 <a href="{{ ep.url | relative_url }}">{{ ep.title }}</a>
                             </td>
@@ -49,6 +58,7 @@ layout: default
                                 {{ ep.date | date: date_format }}
                             </td>
                         </tr>
+                        {%- endif -%}
                     {% endfor %}
                 </tbody>
             </table>
@@ -101,5 +111,18 @@ layout: default
     font-size: 0.9rem;
     color: #777;
     font-style: italic;
+}
+
+.narou-chapter-divider td {
+    border-bottom: 2px solid #111;
+    padding-top: 1.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.narou-chapter-order {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 0.05em;
 }
 </style>

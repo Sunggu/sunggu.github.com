@@ -9,7 +9,7 @@ tags:
 - world-building
 title: 마법사의 미궁 설정 - 마법사로서의 각성
 series: "마법사의 미궁 설정"
-series_order: 1
+series_order: 110
 ---
 [마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-003-wizards-labyrinth %})
 

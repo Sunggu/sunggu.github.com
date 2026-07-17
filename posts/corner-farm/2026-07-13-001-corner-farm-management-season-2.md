@@ -9,7 +9,7 @@ tags:
 - universe-zero
 title: 방구석 농장 경영 시즌 2
 series: "방구석 농장 경영"
-series_order: 2
+series_order: 120
 ---
 - #방구석농장경영시즌2
 -

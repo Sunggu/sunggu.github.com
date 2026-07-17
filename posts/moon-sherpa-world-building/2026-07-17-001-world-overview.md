@@ -9,7 +9,7 @@ tags:
 - universe-fourth
 title: 세계관 개요
 series: "달기지의 셰르파 설정집"
-series_order: 100
+series_order: 110
 ---
 
 ## 작품 소개

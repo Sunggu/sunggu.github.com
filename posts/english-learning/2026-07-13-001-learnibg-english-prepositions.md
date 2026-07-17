@@ -9,7 +9,7 @@ tags:
 - english-for-developers
 title: '[Learning Log] Essential English Prepositions for Developers'
 series: "English Learning"
-series_order: 1
+series_order: 110
 ---
 
 Understanding prepositions is not about memorizing Korean translations, but about visualizing their **spatial concepts**. Here is a clear guide to the most essential prepositions, tailored with tech-industry examples to help you intuitively master them.

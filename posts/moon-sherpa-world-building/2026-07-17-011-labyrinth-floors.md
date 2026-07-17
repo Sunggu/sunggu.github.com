@@ -10,7 +10,7 @@ tags:
 - exploration
 title: "미궁의 층: 구조와 탐사 규칙"
 series: "달기지의 셰르파 설정집"
-series_order: 220
+series_order: 230
 ---
 
 달기지의 핵심은 지하 깊은 곳으로 이어지는 **계층형 미궁 구조**다. 이 미궁은 [여신 전쟁]({% post_url moon-sherpa-world-building/2026-07-17-002-grand-timeline %})의 흔적이자, 동시에 **인간이 감히 통제할 수 없는 압도적인 우주의 거대함과 신비로움**을 체험하는 공간이다.
