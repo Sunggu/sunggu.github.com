@@ -10,7 +10,7 @@ tags:
 - universe-first
 title: "배경 이야기: 행성 이주 계획과 토착 괴물"
 series: "달기지의 셰르파 설정집"
-series_order: 8
+series_order: 400
 ---
 
 [그랜드 타임라인]({% post_url moon-sherpa-world-building/2026-07-17-002-grand-timeline %}) 제1시대에 발생한, 인류의 행성 개척과 그 참혹한 결과에 대한 기록.

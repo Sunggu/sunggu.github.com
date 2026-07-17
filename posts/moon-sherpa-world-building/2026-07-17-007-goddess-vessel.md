@@ -10,7 +10,7 @@ tags:
 - universe-zero
 title: "배경 이야기: 여신의 그릇"
 series: "달기지의 셰르파 설정집"
-series_order: 7
+series_order: 310
 ---
 
 [고차원 지성체]({% post_url moon-sherpa-world-building/2026-07-17-003-core-cosmology %}) 중에서도 가장 인류와 가까웠던 존재, '여신'의 탄생과 각성에 관한 이야기.

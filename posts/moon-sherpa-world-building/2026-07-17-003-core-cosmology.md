@@ -9,7 +9,7 @@ tags:
 - universe-first
 title: 핵심 우주론 — 고차원 지성체와 감정 에너지
 series: "달기지의 셰르파 설정집"
-series_order: 3
+series_order: 120
 ---
 
 이 세계관에서 '영혼'이나 '신'이라 불리던 것들의 실체를 정의한다. 이 우주론은 [유물]({% post_url moon-sherpa-world-building/2026-07-17-004-artifacts %})과 [달기지]({% post_url moon-sherpa-world-building/2026-07-17-005-moon-base %})의 존재 이유를 이해하는 핵심이다.
