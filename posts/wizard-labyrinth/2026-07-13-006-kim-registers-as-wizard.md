@@ -8,10 +8,10 @@ tags:
 - modern-fantasy
 - universe-zero
 title: 김씨 이야기 - 마법사 신고하다
-series: "김씨 이야기"
-series_order: 3
+series: "마법사의 미궁 설정"
+series_order: 6
 ---
-[마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-wizards-labyrinth %}) [김씨 이야기]({% post_url kim-story/2026-07-13-story-of-mr-kim %})
+[마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-003-wizards-labyrinth %}) [김씨 이야기]({% post_url wizard-labyrinth/2026-07-13-007-story-of-mr-kim %})
 
 김씨는 자연친화계열, (외국으로 치면 드루이드?) 로 구분되어 한국에서 1천번째 마법사로 등록되었다. 마법사는 오래전부터 존재하고 있었으나 한국에서 본격적으로 행정처리를 맡아 관리하기 시작한건 20년 전이라고 한다. 그마저도 휴전국이라는 이유로 국방력 강화에 착출되다보니 마법사 인권 윤리 위원회가 만들어진게 불과 20년 전이라고. 김씨는 다행이다 라며 마음을 쓸어내렸었다.
 

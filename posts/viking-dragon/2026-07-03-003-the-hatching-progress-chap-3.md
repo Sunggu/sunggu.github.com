@@ -8,7 +8,7 @@ tags:
 - viking
 - fiction
 title: The strongest dragon in the viking world (Chap. 3)
-series: "바이킹 세계 최고의 드래곤"
+series: "The strongest dragon in the viking world"
 series_order: 3
 ---
 ## Chapter 3

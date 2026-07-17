@@ -8,10 +8,10 @@ tags:
 - modern-fantasy
 - universe-zero
 title: 김씨 이야기
-series: "김씨 이야기"
-series_order: 4
+series: "마법사의 미궁 설정"
+series_order: 7
 ---
-[마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-wizards-labyrinth %}) [김씨 이야기]({% post_url kim-story/2026-07-13-story-of-mr-kim %})
+[마법사의 미궁]({% post_url wizard-labyrinth/2026-07-13-003-wizards-labyrinth %}) [김씨 이야기]({% post_url wizard-labyrinth/2026-07-13-007-story-of-mr-kim %})
 
 신비라는 건 다시 말하자면 다른 차원의 것을 의미한다. 즉 신비를 봤다 라는 건 일반인의 상식에서 벗어남을 의미한다. 일반인들은 이러한 것들을 인식 할 수 없으며 인지하려고 해도 본인의 범주 내에서 이해하고 만다.
 

@@ -1,13 +1,15 @@
 ---
 categories:
 - Novel
-date: 2025-01-29 12:00:00 +0900
+date: 2026-07-14 12:00:00 +0900
 layout: post
 tags:
 - romance
 - mystery
 - fiction
 title: 여름, 첫 조우
+series: "마법사의 미궁 설정"
+series_order: 9
 ---
 
 뜨거운 여름 한 날, 교실 안은 에어컨 바람으로 선선했다. 나는 창가에 앉아 창문 밖을 바라보고 있었다. 하늘은 파랗고 구름은 하얗게 떠 있었다. 가끔 지나가는 새들이 하늘을 가로지르며 날아갔다.
