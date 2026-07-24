@@ -16,12 +16,16 @@ series_order: 230
 달기지의 핵심은 지하 깊은 곳으로 이어지는 **계층형 미궁 구조**다. 이 미궁은 [여신 전쟁]({% post_url moon-sherpa-world-building/2026-07-17-002-grand-timeline %})의 흔적이자, 동시에 **인간이 감히 통제할 수 없는 압도적인 우주의 거대함과 신비로움**을 체험하는 공간이다.
 
 ![미궁 컨셉아트 — 모노레일과 역무실, 벌집형 모듈 구역](/assets/images/Gemini_Generated_Image_p1c05ap1c05ap1c0.jpg)
+![심층 광물 결정체 섹터와 우주 고래 심상체](/assets/images/moon-sherpa/sector-crystal-abyss.png)
+
+* [서사 파편 매트릭스(떡밥 배치)와 지하 섹터 해금 시스템 상세]({% post_url moon-sherpa-world-building/2026-07-17-014-narrative-shards-and-sectors %})
 
 ---
 
-## 미궁의 성격: 금역의 산맥
+## 미궁의 성격: 금역의 산맥과 지성체 심상 공간
 
-달기지는 한때 연구 도시였으나 전쟁 후 전면 철거되었다. ([상세]({% post_url moon-sherpa-world-building/2026-07-17-005-moon-base %})) 현재 남은 것은 텅 빈 지하 동굴과 최소한의 궤도 infrastructure뿐이다.
+달기지는 한때 연구 도시였으나 전쟁 후 전면 철거되었다. ([상세]({% post_url moon-sherpa-world-building/2026-07-17-005-moon-base %}))
+기지 지하 깊은 곳은 성간을 넘어온 각 지성체들의 정신 에너지가 축적되어 개별적으로 형성된 **고유한 심상 생태계**들이 층층이 얽혀 있는 금역의 산맥입니다. 기지 개장 준비와 탐험을 통해 섹터 봉인을 해제할 때마다 은폐된 진실의 **서사 파편(떡밥 조각)**들을 수집하게 됩니다.
 
 - 이곳은 **히말라야나 알프스 고산 지대의 금역(禁域)** 과 같다. 일반인이 안심하고 살아가는 마을이 아니다.
 - 언제 어떤 이상 현상이 터질지 모르는 극도로 위험하고 가혹한 심연.
