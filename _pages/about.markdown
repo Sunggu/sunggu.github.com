@@ -4,26 +4,29 @@ title: About
 permalink: /about/
 ---
 
-## Binarygap Log
+## About Binarygap Log
 
-**Binarygap Log**는 한걸음 차근차근 걸어가며 눈앞의 간극(gap)을 메꾸듯이, 꾸준하고 성실하게 성장해 나가는 여정을 기록하는 공간입니다.
+**Binarygap Log** is a personal notebook dedicated to closing the gap—step by deliberate step—between where we are today and where we're headed next. It's a space built around curiosity, craft, and compounding growth.
 
 ---
 
-### 운영자 Colin 소개
+### Hey, I'm Colin! 👋
 
-안녕하세요, 본 블로그를 운영하는 **Colin**입니다. 
+I'm a builder and researcher at heart. There's nothing quite like the rush of dreaming up an idea and figuring out how to bring it to life in the real world.
 
-저는 세상에 없던 무언가를 구상하고 설계하여 세상 밖으로 만들어내는 모든 일에 깊은 즐거움을 느낍니다. 
+These days, what excites me most isn't just shipping the final product—it’s the messy, fascinating thinking that happens *beforehand*:
+- Going deep down **research rabbit holes**
+- Asking "what if?" and exploring unconventional ideas
+- Distilling wild thoughts into **clean blueprints and actionable plans**
 
-최근에는 단순한 최종 결과물의 제작에 머무르기보다, 그 전 단계에서 일어나는 깊이 있는 **리서치**, 머릿속의 다채로운 **상상**, 그리고 그것을 구체화하는 **계획서 및 설계도**를 작성하는 기획과 설계의 과정에서 한층 더 큰 희열과 재미를 느끼고 있습니다.
+### Why This Space Exists
 
-### 블로그를 시작하는 이유
+I created this blog as an open workbench to document my thinking and share what I'm learning along the way:
 
-이 공간은 저의 지적 탐구와 창작의 즐거움을 차곡차곡 축적하고 다듬기 위해 만들어졌습니다. 
+- **Concept Blueprints:** Turning rough ideas into clear, structured plans.
+- **Deep-Dive Research:** Unpacking complex topics, emerging tech, and systems thinking.
+- **Engineering & Leadership Notes:** Daily lessons in building products, teams, and systems.
 
-- 머릿속 상상을 현실의 아이디어로 바꾸어 줄 **다양한 계획서**
-- 새로운 분야를 집요하게 탐색한 **리서치 기록**
-- 매일의 성장을 이어주는 **공부 및 기술 일지**
+I hope these notes spark a new perspective for you or give you a useful framework for whatever you're currently building.
 
-한걸음씩 걸어가는 이 기록들이 누군가에게는 새로운 상상의 씨앗이 되고, 저에게는 성장해 나가는 간극을 훌륭히 채워줄 이정표가 되기를 바랍니다.
+Thanks for dropping by! Feel free to explore or reach out anytime.

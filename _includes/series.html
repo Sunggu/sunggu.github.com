@@ -26,7 +26,7 @@
 
     <div class="series-container">
       <div class="series-header">
-        <span class="series-label">연재 시리즈 목록</span>
+        <span class="series-label">Series</span>
         <h3 class="series-title">「{{ page.series }}」</h3>
       </div>
       
@@ -34,27 +34,27 @@
         {% if prev_post %}
           <a href="{{ prev_post.url | relative_url }}" class="series-nav-btn prev">
             <span class="nav-arrow">←</span>
-            <span class="nav-text-span">이전화</span>
+            <span class="nav-text-span">Previous</span>
           </a>
         {% else %}
           <div class="series-nav-btn prev disabled">
             <span class="nav-arrow">←</span>
-            <span class="nav-text-span">첫화</span>
+            <span class="nav-text-span">First</span>
           </div>
         {% endif %}
 
         <a href="{{ main_url | relative_url }}" class="series-nav-btn list-main">
-          <span class="nav-text-span">전체 목차 ({{ current_index }} / {{ series_count }})</span>
+          <span class="nav-text-span">Overview ({{ current_index }} / {{ series_count }})</span>
         </a>
 
         {% if next_post %}
           <a href="{{ next_post.url | relative_url }}" class="series-nav-btn next">
-            <span class="nav-text-span">다음화</span>
+            <span class="nav-text-span">Next</span>
             <span class="nav-arrow">→</span>
           </a>
         {% else %}
           <div class="series-nav-btn next disabled">
-            <span class="nav-text-span">마지막화</span>
+            <span class="nav-text-span">Latest</span>
             <span class="nav-arrow">→</span>
           </div>
         {% endif %}

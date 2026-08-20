@@ -3,13 +3,13 @@
 # Site settings
 title: Binarygap Log
 email: yuseungku@gmail.com
-description: "한걸음 차근차근 걸어가며 그 간극을 메꾸듯이, 꾸준하고 성실하게 성장하는 Colin의 리서치 및 상상 계획서 블로그"
+description: "Bridging the gap one step at a time — Colin's personal space for deep research, blueprints, and steady growth."
 tagline: "Bridging the gap step by step"
 baseurl: ""
 url: "https://binarygap.com"
 repository: Sunggu/sunggu.github.com
 github: Sunggu
-lang: ko
+lang: en
 
 # SEO & Analytics
 google_site_verification: "" # Google Search Console verification code
@@ -19,7 +19,7 @@ google_analytics:
 comments: false
 
 author: Colin
-author_bio: "무언가를 상상하고 리서치하며, 새로운 것을 설계하고 계획서로 써내려가는 과정을 즐깁니다."
+author_bio: "Hey there! I'm Colin. I love tinkering with ideas, diving down research rabbit holes, and turning bold ideas into clear blueprints."
 author_pic: ""
 
 paginate: 5

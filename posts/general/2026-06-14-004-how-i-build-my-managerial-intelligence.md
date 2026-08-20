@@ -1,29 +1,41 @@
 ---
-categories: learning-log, management
+categories:
+- learning-log
+- management
 date: 2026-06-14 12:00:00 +0900
 layout: post
-title: 'How I Build My Managerial Intelligence: A Developer''s Guide to Filtering
- Business Signals'
+tags:
+- leadership
+- ai
+- management
+- developer-experience
+title: "How I Build My Managerial Intelligence: A Developer's Guide to Filtering Business Signals"
 ---
 
-Early in my management journey, I treated AI as a mere copy editor—a tool to polish my drafts and make my reports sound more professional. However, I quickly realized the limitation: AI is only as good as the context it’s fed. When my data was sparse, the output was superficial.
+When I first stepped into management, I made the classic rookie mistake: I treated AI like a glorified copy editor. I used it to polish rough drafts, tweak bullet points, and make my weekly reports sound a little more "executive."
 
-Recently, with the emergence of more capable AI models and better data infrastructure at work, I decided to shift my approach. Instead of using AI to just "write" for me, I started using it to "understand" my team’s work.
+It didn't take long to hit a wall. AI is only ever as good as the context you feed it. Garbage context in, generic corporate jargon out.
 
-### My Data Pipeline: From Noise to Context
-I realized that as a manager, it is humanly impossible to monitor every detail. My goal was to build a system that aggregates scattered signals—Jira tickets, GitHub PRs, meeting notes, and chat logs—into a coherent narrative.
+Recently, with smarter models and way better data plumbing at work, I decided to flip the script. Instead of asking AI to just *write* for me, I started using it to *understand* what my team is actually experiencing day-to-day.
 
-Here’s how I structured it:
-* **Data Extraction:** Used **MCP (Model Context Protocol)** to pull data into my environment.
-* **Standardization:** Converted everything into JSON format for easier AI parsing.
-* **Connection:** This was the toughest part. Manually connecting the dots between Jira tickets and actual progress was difficult due to gaps in our internal workflows. 
+### My Data Pipeline: Cutting Through the Noise
+Let’s be real: as an engineering manager, keeping tabs on every single commit, pull request, Slack thread, and Jira ticket is a fast track to burnout. 
+
+My goal was simple: build a lightweight pipeline that aggregates all these scattered breadcrumbs and turns them into a coherent narrative.
+
+Here’s how I structured the workflow:
+* **Data Extraction:** Hooked up **MCP (Model Context Protocol)** to pull real-time activity straight into my local environment.
+* **Standardization:** Normalized everything into clean JSON so the LLM can parse and reason over it without hallucinating.
+* **Connecting the Dots:** Honestly, this was the hardest part. Bridging the disconnect between messy Jira tickets and actual GitHub progress took some serious wrestling with our internal workflows.
 
 ### The Managerial "Aha!" Moment
-The data collection was time-consuming and admittedly imperfect. But once the pipeline was in place, the turnaround time for generating insights dropped drastically.
+Building the collection layer was definitely tedious and a bit messy at first. But once the pipeline clicked? The turnaround time for generating actionable team insights dropped from hours to seconds.
 
-More importantly, this process gave me something I couldn't get from weekly reports alone: **deep empathy for my team's daily grind.** I began to see the invisible effort behind every PR and every ticket, allowing me to understand the "why" and "how" behind their work.
+More importantly, it gave me something a static spreadsheet or weekly standup never could: **genuine empathy for the day-to-day grind.** I could suddenly see the invisible cognitive load behind complex PR reviews and blocker resolutions. It helped me understand not just *what* was shipping, but *how* and *why*.
 
-### Looking Ahead
-This wasn't just about automation; it was about building **Managerial Intelligence**. I know where the gaps in our tracking are, and I have a clear vision for the next iteration of this system.
+### What's Next?
+This was never just about saving time on reporting—it’s about leveling up my **Managerial Intelligence**. I already see where our tracking has blind spots, and I'm itching to build the next iteration.
 
-In my next post, I plan to dive deeper into how I refine these data structures to make them even more actionable. If you’re also trying to bridge the gap between technical data and management, I’d love to hear your approach.
+In my next post, I’ll break down the exact data schemas I'm using to make these signals even more actionable.
+
+If you're also an engineer-turned-manager trying to bridge the gap between raw dev data and high-level leadership, I'd love to hear how you're tackling it!
