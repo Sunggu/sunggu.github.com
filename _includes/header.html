@@ -10,22 +10,9 @@
                 <a href="{{ page.url | relative_url }}">{{page.title}}</a>
             {% endfor %}
             <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-            <button id="search-toggle" aria-label="Search" title="Search" class="search-toggle-btn">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
         </nav>
     </div>
-    
-    <div class="header-sub">
-        <p id="description">{{site.description}}</p>
-        <!-- Search box container (Pattern A: Toggleable) -->
-        <div id="search-container">
-            <input type="text" id="search-input" placeholder="Search posts, tags..." autocomplete="off" />
-            <button id="search-close" aria-label="Close search" class="search-close-btn">&times;</button>
-            <ul id="results-container"></ul>
-        </div>
-    </div>
+    {% if site.description %}
+    <p id="description">{{site.description}}</p>
+    {% endif %}
 </header>
