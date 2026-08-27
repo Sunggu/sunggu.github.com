@@ -28,11 +28,42 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ "/search.json" | relative_url }}',
-        searchResultTemplate: '<li><a href="{url}">{title}</a><span style="font-size: 0.8rem; color: #666; margin-left: 10px;">{date}</span></li>',
-        noResultsText: '<li>No results found</li>',
+        searchResultTemplate: '<li><a href="{url}">{title}</a><span class="search-result-date">{date}</span></li>',
+        noResultsText: '<li class="no-result">No results found</li>',
         limit: 10,
         fuzzy: false
       });
+
+      // Search toggle logic
+      (function() {
+        var searchToggle = document.getElementById('search-toggle');
+        var searchContainer = document.getElementById('search-container');
+        var searchInput = document.getElementById('search-input');
+        var searchClose = document.getElementById('search-close');
+
+        if (searchToggle && searchContainer && searchInput) {
+          searchToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            searchContainer.classList.toggle('active');
+            if (searchContainer.classList.contains('active')) {
+              searchInput.focus();
+            }
+          });
+        }
+
+        if (searchClose && searchContainer) {
+          searchClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            searchContainer.classList.remove('active');
+          });
+        }
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && searchContainer && searchContainer.classList.contains('active')) {
+            searchContainer.classList.remove('active');
+          }
+        });
+      })();
     </script>
 </body>
 
