@@ -189,8 +189,31 @@ footer strong {
 }
 
 #social {
-    text-align: right;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+#social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #555 !important;
+    padding: 4px;
+    transition: color 0.15s ease;
+}
+
+#social a:hover {
+    color: #002c53 !important;
+    text-decoration: none !important;
+}
+
+#social svg {
+    width: 20px;
+    height: 20px;
+    display: block;
 }
 
 /* ACCESSIBILITY */
