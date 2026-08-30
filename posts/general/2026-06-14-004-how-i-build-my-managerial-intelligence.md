@@ -10,7 +10,10 @@ tags:
 - management
 - developer-experience
 title: "How I Build My Managerial Intelligence: A Developer's Guide to Filtering Business Signals"
+image: /assets/images/posts/004-how-i-build-my-managerial-intelligence-cover.png
 ---
+
+![How I Build My Managerial Intelligence: A Developer's Guide to Filtering Business Signals](../assets/images/posts/004-how-i-build-my-managerial-intelligence-cover.png)
 
 When I first stepped into management, I made the classic rookie mistake: I treated AI like a glorified copy editor. I used it to polish rough drafts, tweak bullet points, and make my weekly reports sound a little more "executive."
 
