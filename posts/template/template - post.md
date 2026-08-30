@@ -1,53 +1,34 @@
 ---
-categories:
-  - tech
+title: "{{title}}"
 date: {{date:YYYY-MM-DD}} {{time:HH:mm:ss}} +0900
 layout: post
+categories:
+  - Daily
 tags:
-  - topic
-  - insight
-title: "{{title}}"
+  - log
+  - til
+# description: ""
+# series: 
+# series_order: 1
 ---
 
-<!-- 💡 Hook & Opening: Grab attention with a personal realization, common pitfall, or clear problem statement. -->
-When I first started tackling [Topic/Problem], I fell into a common trap: [Initial Mistake or Common Misconception]. 
+<!-- 
+💡 일일 로그 & 자유 포스트 템플릿
+- 별도의 고정 양식 없이 오늘의 작업, 생각, 발견한 점을 자유롭게 기록하세요.
+- 필요 시 아래의 가이드/섹션 힌트를 참고하거나 주석을 풀어서 활용할 수 있습니다.
+-->
 
-It didn't take long to hit a wall—[Core Limitation or Trigger for Change].
+여기에 오늘의 생각이나 작업한 내용, 기록하고 싶은 이야기를 자유롭게 작성하세요.
 
-Recently, I decided to flip the script. Instead of [Old Way], I started focusing on [New Insight/Strategy].
-
+<!-- 
 ---
 
-### The Problem: Cutting Through the Noise
+### 📝 Today's Log (작업 / 진행 상황)
+- 
 
-<!-- 🔍 Context & Challenge: Define the core bottleneck, friction point, or question you wanted to solve. -->
-Let's be real: when dealing with [Domain/Challenge], [describe the complexity or pain point].
+### 💡 Thoughts & Learnings (생각 / 배운 점)
+- 
 
-My goal was straightforward: build a clean, reliable system that [desired outcome].
-
-Here's how I structured the workflow:
-* **[Step 1 / Extraction]:** [Brief explanation of what it does and why]
-* **[Step 2 / Processing]:** [Key architecture, tooling, or mental model used]
-* **[Step 3 / Integration]:** [The hardest part or biggest hurdle overcome]
-
----
-
-### The "Aha!" Moment & Key Insights
-
-<!-- 🚀 The Turning Point: What changed once this was implemented? Share tangible takeaways or mindset shifts. -->
-Getting the initial pieces in place took some iteration and trial-and-error. But once things clicked? [Describe the immediate benefit or breakthrough].
-
-More importantly, it gave me a whole new perspective on [Core Realization]:
-1. **[Insight 1]:** [Actionable lesson or observation]
-2. **[Insight 2]:** [Nuance or non-obvious takeaway]
-
----
-
-### What's Next?
-
-<!-- 🔮 Looking Ahead & Discussion: Next steps, future iterations, and engaging conversation starter. -->
-This is just the first iteration. I already have a clear roadmap for what to refine next: [Future Plans or Follow-up Topic].
-
-In my next post, I'll dive deeper into [Next Topic Details].
-
-If you're also exploring [Topic/Domain] or have tackled a similar problem, I'd love to hear how you're approaching it!
+### 🔗 Links & References (참고 자료)
+- 
+-->
