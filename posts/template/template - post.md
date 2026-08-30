@@ -1,5 +1,6 @@
 ---
 title: "{{title}}"
+description: ""
 date: {{date:YYYY-MM-DD}} {{time:HH:mm:ss}} +0900
 layout: post
 categories:
@@ -7,10 +8,13 @@ categories:
 tags:
   - log
   - til
-# description: ""
+# image: ../assets/images/posts/cover.png
 # series: 
 # series_order: 1
 ---
+
+<!-- 💡 포스트 커버 이미지가 있을 경우 아래 주석을 풀고 사용하세요 -->
+<!-- ![{{title}}](../assets/images/posts/cover.png) -->
 
 <!-- 
 💡 일일 로그 & 자유 포스트 템플릿
