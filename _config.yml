@@ -6,7 +6,7 @@ email: yuseungku@gmail.com
 description: "Bridging the gap one step at a time — Colin's personal space for deep research, blueprints, and steady growth."
 tagline: "Bridging the gap step by step"
 baseurl: ""
-url: "https://binarygap.com"
+url: "https://blog.binarygap.com"
 repository: Sunggu/sunggu.github.com
 github: Sunggu
 lang: en
@@ -14,7 +14,7 @@ lang: en
 # SEO & Analytics
 google_site_verification: "" # Google Search Console verification code
 naver_site_verification: ""  # Naver Webmaster Tools verification code
-google_analytics:
+google_analytics: "G-JYW9KY41V4"
 
 comments: false
 
