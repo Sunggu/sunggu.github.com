@@ -1,0 +1,730 @@
+/* 기본 가독성 중심 타이포그래피 설정 */
+body {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #2b2b2b;
+    background-color: #f9f8f6 !important; /* 소설 뷰어 느낌의 부드러운 미색 배경 */
+    max-width: 760px !important; /* 시선 이동 최소화 */
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem;
+    letter-spacing: -0.01em;
+    
+    /* 구형 기기 호환성 상자 모델 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 글로벌 링크 컬러 (소설가가 되자 딥 블루 스타일) */
+a {
+    color: #002c53 !important;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline !important;
+    color: #004077 !important;
+}
+
+/* 태그 링크 스타일 등 상속 보정 */
+.p-category {
+    color: #002c53 !important;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 제목 및 UI 요소에는 깔끔한 고딕체 적용 */
+h1, h2, h3, h4, h5, h6, 
+#description, 
+#navigation, 
+footer,
+input, 
+button,
+#results-container,
+#pages,
+#social {
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* 사이트 헤더 컴팩트 레이아웃 (iPad mini 1 iOS 9 Safari 호환을 위한 float 기반 설계) */
+.site-header {
+    margin-bottom: 2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e0dfdb;
+    clear: both;
+}
+
+/* clearfix */
+.site-header:after,
+.header-main:after,
+.header-sub:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header-main {
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#title {
+    float: left;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 1.2;
+}
+
+#title a {
+    color: #111111; /* 정갈한 딥 블랙 */
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#title a:hover {
+    text-decoration: underline;
+}
+
+#navigation {
+    float: right;
+    margin: 4px 0 0 0;
+}
+
+#navigation a {
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 15px; /* 메뉴 다닥다닥 붙는 현상 마진으로 완벽 해결 */
+}
+
+#navigation a:first-child {
+    margin-left: 0;
+}
+
+#navigation a:hover {
+    color: #002c53;
+    text-decoration: underline;
+}
+
+#description {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 6px 0 0 0;
+    line-height: 1.4;
+    clear: both;
+}
+
+/* 포스트 상세 페이지 가독성 향상 */
+.post h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.e-content {
+    margin-top: 2rem;
+}
+
+/* 문단 간 여백 - 소설 뷰어의 핵심 */
+.e-content p {
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    text-align: justify; /* 양쪽 정렬 */
+}
+
+/* 인용구 스타일 */
+blockquote {
+    border-left: 4px solid #333333;
+    padding-left: 20px;
+    margin: 1.5rem 0;
+    color: #555;
+    font-style: italic;
+    background-color: #f2f0eb;
+}
+
+/* 저자 및 푸터 */
+#h-card {
+    overflow: auto;
+    padding: 20px;
+    background-color: #f2f0eb;
+    border-radius: 6px;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+    clear: both;
+}
+
+#h-card h3 {
+    margin-top: 0;
+    color: #333;
+    text-align: left;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0dfdb;
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+    clear: both;
+}
+
+footer strong {
+    font-weight: 400;
+}
+
+#pages {
+    text-align: center;
+    margin-top: 30px;
+    clear: both;
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+#social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #555 !important;
+    padding: 4px;
+    transition: color 0.15s ease;
+}
+
+#social a:hover {
+    color: #002c53 !important;
+    text-decoration: none !important;
+}
+
+#social svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* ACCESSIBILITY */
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+    color: #fff;
+    background-color: #002c53;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 1rem;
+    z-index: 999;
+}
+
+/* 텍스트 선택 시 하이라이트 및 가독성 개선 */
+::-moz-selection {
+    background-color: #002c53;
+    color: #ffffff;
+}
+::selection {
+    background-color: #002c53;
+    color: #ffffff;
+}
+
+/* 홈 포스트 목록 레이아웃 (E-Ink & 페이퍼 가독성 중심) */
+.home-container {
+    margin-top: 0.5rem;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-item {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid #e0dfdb;
+}
+
+.post-item:first-child {
+    padding-top: 0.3rem;
+}
+
+.post-item:last-child {
+    border-bottom: none;
+}
+
+.post-item-title {
+    margin: 0 0 0.35rem 0 !important;
+    font-size: 1.25rem !important;
+    font-weight: 700;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+}
+
+.post-item-title a {
+    color: #111111 !important;
+    text-decoration: none !important;
+}
+
+.post-item-title a:hover {
+    color: #002c53 !important;
+    text-decoration: underline !important;
+}
+
+.post-item-meta {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.post-item-date {
+    color: #666;
+}
+
+.meta-separator {
+    color: #aaa;
+}
+
+.post-item-tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.post-tag {
+    font-size: 0.78rem;
+    color: #555 !important;
+    text-decoration: none !important;
+}
+
+.post-tag:hover {
+    color: #002c53 !important;
+    text-decoration: underline !important;
+}
+
+.post-item-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+/* 모바일 및 E-Ink 환경 대응 최적화 */
+@media screen and (max-width: 560px) {
+    body {
+        padding: 1rem 0.8rem;
+    }
+    .header-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    #title {
+        float: none;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    #navigation {
+        float: none;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    #navigation a {
+        font-size: 0.9rem;
+        margin-left: 0;
+    }
+    /* 모바일에서 소개글 숨김으로 본문 바로 노출 */
+    #description {
+        display: none !important;
+    }
+    .post-item {
+        padding: 1.15rem 0;
+    }
+    .post-item-title {
+        font-size: 1.15rem !important;
+    }
+    .post-item-excerpt {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+/* 시리즈(연결고리) 네비게이션 컴포넌트 */
+.series-container {
+    margin: 3.5rem 0 2rem 0;
+    padding: 1.5rem;
+    background: #faf8f5; /* 부드러운 신문지 미색 배경 */
+    border: 1px solid #ccc; /* 얇은 회색 실선 */
+    border-radius: 0; /* 둥근 모서리 제거로 인쇄물 느낌 극대화 */
+}
+
+.series-header {
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #333; /* 검은색/어두운 회색 실선 */
+    padding-bottom: 0.6rem;
+}
+
+.series-emoji {
+    font-size: 1.2rem;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.series-label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.series-title {
+    margin: 0.3rem 0 0 0 !important;
+    font-size: 1.25rem !important;
+    font-weight: 700;
+    color: #111;
+}
+
+.series-navigation {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 0.8rem 0;
+    clear: both;
+}
+
+.series-navigation:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.series-nav-btn {
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.88rem;
+    color: #002c53 !important;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+
+.series-nav-btn.prev {
+    width: 30%;
+    float: left;
+    text-align: left;
+}
+
+.series-nav-btn.list-main {
+    width: 40%;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+
+.series-nav-btn.next {
+    width: 30%;
+    float: right;
+    text-align: right;
+}
+
+.series-nav-btn.disabled {
+    color: #999 !important;
+    cursor: default;
+}
+
+.nav-arrow {
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-text-span {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.series-list-details {
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: 0.5rem;
+}
+
+.series-list-summary {
+    padding: 0.6rem 0.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    background: #faf8f5;
+    user-select: none;
+}
+
+.series-list-summary:hover {
+    color: #111;
+    background: #eee;
+}
+
+.series-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ccc;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.series-item {
+    display: block;
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+    clear: both;
+}
+
+.series-item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.series-item:last-child {
+    border-bottom: none;
+}
+
+.series-item.active {
+    background: #f4f4f4;
+}
+
+.item-order {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #555;
+    float: left;
+    margin-right: 8px;
+}
+
+.item-title {
+    color: #002c53; /* 소설가가 되자 특유의 푸른색 링크 느낌 */
+    text-decoration: none;
+    float: left;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-title.current {
+    font-weight: 700;
+    color: #111;
+}
+
+.item-title:hover {
+    text-decoration: underline;
+}
+
+.item-badge {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #111;
+    background: #ddd;
+    padding: 1px 4px;
+    float: right;
+}
+
+@media screen and (max-width: 560px) {
+    .series-nav-btn {
+        width: 100%;
+        float: none;
+        margin-bottom: 0.5rem;
+    }
+    .series-nav-btn.next {
+        float: none;
+        margin-bottom: 0;
+    }
+}
+
+/* 본문 내 이미지 가독성 및 양쪽 정렬 찢어짐 해결 (신문 스크랩 일러스트 스타일) */
+.e-content img {
+    display: block;
+    margin: 2.5rem auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #bbb;
+    padding: 6px;
+    background: #fff;
+    box-shadow: none; /* 그림자 완전 제거 */
+    border-radius: 0; /* 둥근 모서리 제거 */
+}
+
+/* 홈 화면 소설가가 되자(Narou) 스타일 연재 시리즈 대시보드 */
+.home-series-section {
+    margin-bottom: 3rem;
+}
+
+.home-series-section .section-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.3rem;
+}
+
+.narou-series-box {
+    border: 1px solid #ccc;
+    background: #ffffff; /* 순수 흰색 */
+    padding: 1.2rem;
+    margin-bottom: 1.8rem;
+    box-sizing: border-box;
+}
+
+.narou-series-header {
+    border-bottom: 2px solid #111; /* 명확한 경계 분리 */
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+    clear: both;
+}
+
+.narou-series-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.narou-series-title {
+    margin: 0 !important;
+    font-size: 1.12rem !important;
+    font-weight: 700;
+    color: #111;
+    float: left;
+}
+
+.narou-series-title a {
+    color: #111 !important;
+    font-weight: 700;
+}
+
+.narou-series-title a:hover {
+    text-decoration: underline !important;
+}
+
+.narou-series-meta {
+    float: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.78rem;
+    color: #555;
+    font-weight: bold;
+    margin-top: 0.3rem;
+}
+
+.narou-episodes-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    background: #ffffff;
+}
+
+.narou-episodes-table td {
+    padding: 0.45rem 0.6rem !important;
+    border-bottom: 1px solid #e5e2db !important;
+    color: #333;
+}
+
+.narou-episodes-table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.narou-ep-order {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    color: #555;
+    width: 55px;
+    text-align: center;
+    background: #ffffff; /* 회색 음영 제거 */
+    border-right: 1px solid #e5e2db;
+}
+
+.narou-ep-title {
+    padding-left: 12px !important;
+}
+
+.narou-ep-title a {
+    color: #002c53 !important;
+}
+
+.narou-ep-title a:hover {
+    text-decoration: underline !important;
+}
+
+.narou-ep-date {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.78rem;
+    color: #777;
+    width: 105px;
+    text-align: right;
+}
+
+/* 최신 글 목록 섹션 타이틀 */
+.recent-posts-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #222;
+    margin: 3rem 0 1.2rem 0;
+    border-bottom: 2px solid #222;
+    padding-bottom: 0.4rem;
+    clear: both;
+}

@@ -1,0 +1,64 @@
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "series_order" %}
+  {% assign series_count = series_posts | size %}
+
+  {% if series_count > 1 %}
+    {% assign prev_post = nil %}
+    {% assign next_post = nil %}
+    {% assign current_found = false %}
+    {% assign current_index = 0 %}
+
+    {% for sp in series_posts %}
+      {% if sp.url == page.url %}
+        {% assign current_found = true %}
+        {% assign current_index = forloop.index %}
+      {% else %}
+        {% if current_found == false %}
+          {% assign prev_post = sp %}
+        {% else %}
+          {% assign next_post = sp %}
+          {% break %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign main_url = page.series_url | default: "/" %}
+
+    <div class="series-container">
+      <div class="series-header">
+        <span class="series-label">Series</span>
+        <h3 class="series-title">「{{ page.series }}」</h3>
+      </div>
+      
+      <div class="series-navigation">
+        {% if prev_post %}
+          <a href="{{ prev_post.url | relative_url }}" class="series-nav-btn prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text-span">Previous</span>
+          </a>
+        {% else %}
+          <div class="series-nav-btn prev disabled">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text-span">First</span>
+          </div>
+        {% endif %}
+
+        <a href="{{ main_url | relative_url }}" class="series-nav-btn list-main">
+          <span class="nav-text-span">Overview ({{ current_index }} / {{ series_count }})</span>
+        </a>
+
+        {% if next_post %}
+          <a href="{{ next_post.url | relative_url }}" class="series-nav-btn next">
+            <span class="nav-text-span">Next</span>
+            <span class="nav-arrow">→</span>
+          </a>
+        {% else %}
+          <div class="series-nav-btn next disabled">
+            <span class="nav-text-span">Latest</span>
+            <span class="nav-arrow">→</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}
