@@ -1,6 +1,6 @@
 # Binarygap Log
 
-Welcome to the repository for **Binarygap Log** — Colin's personal space for deep-dive research, conceptual blueprints, and engineering notes.
+Welcome to the repository for **Binarygap Log** — a space for stories, ideas, experiences, and discoveries from around the world.
 
 This site is powered by **Jekyll** and hosted on **GitHub Pages**, equipped with SEO optimization, RSS feeds, full-text search, and tagging.
 

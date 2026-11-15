@@ -3,8 +3,8 @@
 # Site settings
 title: Binarygap Log
 email: yuseungku@gmail.com
-description: "Bridging the gap one step at a time — Colin's personal space for deep research, blueprints, and steady growth."
-tagline: "Bridging the gap step by step"
+description: "Discover stories. Ideas, experiences, and discoveries from around the world."
+tagline: "Discover stories. Ideas, experiences, and discoveries from around the world."
 baseurl: ""
 url: "https://blog.binarygap.com"
 repository: Sunggu/sunggu.github.com
@@ -18,8 +18,8 @@ google_analytics: "G-XYMZ7XMCDQ"
 
 comments: false
 
-author: Colin
-author_bio: "Hey there! I'm Colin. I love tinkering with ideas, diving down research rabbit holes, and turning bold ideas into clear blueprints."
+author: "Binarygap"
+author_bio: "Binarygap Log shares ideas, experiences, and discoveries from around the world — turning curiosity into clear blueprints and meaningful stories."
 author_pic: ""
 
 paginate: 5

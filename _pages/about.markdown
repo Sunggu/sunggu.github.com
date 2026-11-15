@@ -6,27 +6,18 @@ permalink: /about/
 
 ## About Binarygap Log
 
-**Binarygap Log** is a personal notebook dedicated to closing the gap—step by deliberate step—between where we are today and where we're headed next. It's a space built around curiosity, craft, and compounding growth.
+**Binarygap Log** is a space dedicated to **discovering stories—ideas, experiences, and discoveries from around the world.** It exists to capture curiosity, unpack complex topics, and turn scattered observations into clear, lasting records.
 
 ---
 
-### Hey, I'm Colin! 👋
+### What You'll Find Here
 
-I'm a builder and researcher at heart. There's nothing quite like the rush of dreaming up an idea and figuring out how to bring it to life in the real world.
+Rather than focusing on a single person, this publication focuses on the ideas and lessons themselves:
 
-These days, what excites me most isn't just shipping the final product—it’s the messy, fascinating thinking that happens *beforehand*:
-- Going deep down **research rabbit holes**
-- Asking "what if?" and exploring unconventional ideas
-- Distilling wild thoughts into **clean blueprints and actionable plans**
+- **Ideas & Blueprints:** Turning rough concepts into clear, structured plans.
+- **Experiences & Retrospectives:** Honest reflections on building, learning, and refining workflows.
+- **Discoveries & Research:** Unpacking emerging tech, systems thinking, and insights from around the world.
 
-### Why This Space Exists
+We hope these stories spark a new perspective or offer a useful framework for whatever you're exploring next.
 
-I created this blog as an open workbench to document my thinking and share what I'm learning along the way:
-
-- **Concept Blueprints:** Turning rough ideas into clear, structured plans.
-- **Deep-Dive Research:** Unpacking complex topics, emerging tech, and systems thinking.
-- **Engineering & Leadership Notes:** Daily lessons in building products, teams, and systems.
-
-I hope these notes spark a new perspective for you or give you a useful framework for whatever you're currently building.
-
-Thanks for dropping by! Feel free to explore or reach out anytime.
+Thanks for dropping by! Feel free to explore anytime.

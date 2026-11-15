@@ -12,10 +12,7 @@ tags:
   - workflow
   - atomic-log
   - productivity
-image: /assets/images/posts/005-refactoring-the-unit-of-records-cover.png
 ---
-
-![Refactoring the Unit of Records: Why I Gave Up Polished Articles for Atomic Logs](../assets/images/posts/005-refactoring-the-unit-of-records-cover.png)
 
 > **TL;DR**  
 > I let go of the pressure to write grand, polished articles and refactored my writing habit into "Atomic Logs"—minimal units of knowledge I can digest in my own words within 10 minutes a day.
