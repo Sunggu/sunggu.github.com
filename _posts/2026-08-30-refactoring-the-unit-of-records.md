@@ -1,6 +1,6 @@
 ---
-title: "기록의 단위를 리팩터링하다: 완성된 문서를 포기하고 원자적 로그를 남기기로 한 이유"
-description: "완성된 문서를 향한 완벽주의와 부담감을 내려놓고, 하루 10분 안에 내 언어로 소화할 수 있는 최소 단위의 원자적 로그(Atomic Log)로 기록 방식을 리팩터링한 회고."
+title: "Refactoring the Unit of Records: Why I Gave Up Polished Articles for Atomic Logs"
+description: "A retrospective on letting go of perfectionism and the pressure to write polished articles, and refactoring my writing habit into minimal Atomic Logs digestible in 10 minutes a day."
 date: 2026-08-30 22:15:00 +0900
 layout: post
 categories:
@@ -15,51 +15,51 @@ tags:
 image: /assets/images/posts/005-refactoring-the-unit-of-records-cover.png
 ---
 
-![기록의 단위를 리팩터링하다: 완성된 문서를 포기하고 원자적 로그를 남기기로 한 이유](../assets/images/posts/005-refactoring-the-unit-of-records-cover.png)
+![Refactoring the Unit of Records: Why I Gave Up Polished Articles for Atomic Logs](../assets/images/posts/005-refactoring-the-unit-of-records-cover.png)
 
 > **TL;DR**  
-> 완벽하고 거대한 글을 작성하려는 부담감을 내려놓고, 하루 10분 안에 내 언어로 소화할 수 있는 '최소 단위의 원자적 로그(Atomic Log)'로 기록 방식을 리팩터링했습니다.
+> I let go of the pressure to write grand, polished articles and refactored my writing habit into "Atomic Logs"—minimal units of knowledge I can digest in my own words within 10 minutes a day.
 
-### 나는 왜 글쓰기가 힘들어졌을까?
-현재 3개의 블로그를 운영하고 있다. 다루는 플랫폼과 주제는 다르지만 시작은 단순했다. 내가 공부한 것, 개발하며 마주한 트러블슈팅, 직접 만든 프로젝트들을 사라지지 않게 남겨두는 일종의 '기록소'를 만들고 싶었다. 실제로 이렇게 구축한 나만의 [세컨드 브레인(Second Brain)](https://www.buildingasecondbrain.com/) 덕분에 검색창에 내가 겪었던 문제를 검색했을 때 내 글이 나오면 묘한 희열을 느끼기도 했다.
+### Why Did Writing Become So Hard?
+I currently run three blogs. Although their platforms and topics differ, my motivation was simple: I wanted to build an archive so that what I learned, the troubleshooting I went through while coding, and the projects I built wouldn't just vanish. In fact, thanks to this personal [Second Brain](https://www.buildingasecondbrain.com/), I sometimes felt a quiet thrill when my own post popped up in search results for a problem I had encountered before.
 
-하지만 글을 쓰면 쓸수록 손가락이 무거워졌다. 매일 새로운 지식을 마주하고 문제를 해결하지만, 글로 옮기는 작업은 점점 버거워졌다. 리소스는 한정되어 있는데 글 하나를 발행하기 위해 쏟아야 하는 에너지가 지나치게 컸다. 어느 순간 기록은 사라지고 피로감만 남았다.
+However, the more I wrote, the heavier my fingers felt. Every day I encountered new knowledge and solved problems, yet putting them into writing became increasingly overwhelming. My resources were limited, while the energy required to publish a single post was disproportionately huge. At some point, the records stopped, and only fatigue remained.
 
-### 원인을 찾기 위해 나의 행동을 기록해봤다
-지난 한 주간 나의 행동을 기록해 보았다. 처음에는 종일 컴퓨터 앞에 앉아 있으니 노트북이 편할 것 같아 [옵시디언(Obsidian)](https://obsidian.md)을 켰다. 그러다 태블릿으로 옮겨가 개인 저장소에 동기화했고, 출퇴근길에는 스마트폰으로 글을 썼다. 하지만 기기만 복잡해질 뿐 집중은 분산되었고 도구를 들여다보지도 않게 되었다.
+### Logging My Behavior to Find the Root Cause
+For the past week, I tracked my own behavior. At first, since I sit in front of a computer all day, I opened [Obsidian](https://obsidian.md) thinking a laptop would be convenient. Then I moved to a tablet synced to a private repository, and wrote on my smartphone during my commute. Yet adding more devices only scattered my focus, and I stopped opening the tools altogether.
 
-자연스럽게 기록이 중단될 위기가 왔고, 나는 모든 전자기기를 치우고 펜과 종이를 들었다. 이 방식은 효과적이었다. 하루 동안 무엇에 집중하고 어떤 노력을 기울이고 있는지 디버깅하듯 적어 내려갔다.
+Naturally, my writing habit was on the verge of stopping, so I put away all electronic devices and picked up a pen and paper. This approach worked. I wrote down what I was focusing on and where my effort was going throughout the day, as if debugging my routine:
 
-- 맥락 없는 회의
-- 주변 사람들과의 잡담
-- 신세 한탄
-- 포털 뉴스 새로고침
+- Contextless meetings
+- Small talk with people around me
+- Complaining about my situation
+- Refreshing news portals
 
-적어놓고 보니 놀라웠다. 나는 생각보다 아무것도 하고 있지 않았다.
+Seeing it written down was shocking. I was doing far less than I thought.
 
-### 나는 무엇에 지쳐있었던 걸까?
-하루 종일 무언가에 쫓기듯 피곤했는데, 정작 생산적인 작업 로그는 없었다. 하루의 대부분은 휘발성 대화와 뉴스 창 새로고침으로 흩어져 있었다.
+### What Was Actually Exhausting Me?
+I felt exhausted as if I were being chased all day, yet there were no productive work logs to show for it. Most of my day had evaporated into ephemeral conversations and refreshing news feeds.
 
-그러면서 머릿속으로는 '오늘 공부한 것도 정리해야 하고, 블로그에 멋진 아키텍처 글도 올려야 하는데'라는 부채감만 계속 쌓아두고 있었다. 결국 실제로 한 일도 없으면서 머릿속으로만 '완벽하고 거대한 글'을 기획하느라 에너지를 전부 낭비하고 있었던 것이다.
+Meanwhile, in the back of my mind, I kept piling up guilt: *"I should organize what I studied today, and I should publish a great architecture post on my blog."* In the end, I had wasted all my energy mentally planning "perfect, grand articles" without having actually done the work.
 
-### 기록의 단위를 리팩터링하다
-무언가 거창하게 해낸 날에만 글을 쓰려고 하니 펜이 멈출 수밖에 없었다. 그래서 기록의 기준을 최소 단위로 낮추기로 했다.
+### Refactoring the Unit of Records
+Because I only tried to write on days when I accomplished something big, my pen inevitably froze. So I decided to lower the bar for what counts as a record to the smallest possible unit.
 
-- 하루에 단 한 줄짜리 에러 로그라도 좋다.    
-- 공식 문서에서 건진 설정 옵션 한 줄이라도 '실제로 내가 이해하고 손을 움직인 최소 단위([Atomic Log](https://zettelkasten.de/posts/principles-atomic-notes/))'만 남긴다.    
-- 신세 한탄과 뉴스에 뺏긴 시간을 자책하기보다, 단 10분이라도 진짜 내 지식이 된 순간을 포착해 기록소에 던져둔다.
+- Even a single-line error log per day is enough.
+- Even a single configuration option gleaned from official docs—I only record the minimal unit that I actually understood and got my hands dirty with ([Atomic Log](https://zettelkasten.de/posts/principles-atomic-notes/)).
+- Rather than beating myself up over time lost to complaining and news, I capture even a 10-minute moment where something truly became my own knowledge and drop it into the archive.
 
-### 관심사 분리: 블로그의 역할 정의
-기록의 단위를 쪼개자 블로그의 역할도 명확해졌다. 거대한 하나의 저장소에 모든 것을 욱여넣는 대신 [관심사의 분리(Separation of Concerns)](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%8B%AC%EC%82%AC_%EB%B6%84%EB%A6%AC) 원칙처럼 채널별 관심사를 분리했다.
+### Separation of Concerns: Defining Each Blog's Role
+Breaking down the unit of records also clarified the role of each blog. Instead of cramming everything into one massive repository, I separated concerns by channel, much like the [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) principle:
 
-- **현재 블로그**: 일상의 고민과 생산성, 삽질을 돌아보는 회고 에세이
-- **기술 블로그 (T)**: 1줄짜리 트러블슈팅과 팁도 가감 없이 올리는 아토믹 로그
-- **프로젝트 블로그 (G)**: 실제로 동작하는 코드를 완성했을 때만 차분히 남기는 프로젝트 기록
+- **This Blog**: Retrospective essays reflecting on daily thoughts, productivity, and trial-and-error.
+- **Tech Blog (T)**: Atomic logs where even one-line troubleshooting notes and tips are posted without hesitation.
+- **Project Blog (G)**: Calm, deliberate project logs written only when working code is actually completed.
 
-### 내 언어로 이해한 만큼만 기록하기
-앞으로는 완벽함을 버리고 '내 언어로 10분 만에 소화 가능한 분량'만 발행하려 한다.
+### Recording Only as Much as I Understand in My Own Words
+Going forward, I plan to abandon perfectionism and publish only what I can digest in 10 minutes in my own words.
 
-AI를 활용하면 몇 초 만에 그럴듯한 장문의 글을 뽑아낼 수 있지만, 그렇게 생성된 글은 내 지식이 아니다. AI는 오탈자 검수와 논리적 빈틈을 찾는 보조 도구로만 제한하고, 직접 겪고 소화한 생각만 기록으로 남길 것이다. 내가 만든 경험과 지식이 허공으로 사라지지 않도록, 가볍지만 단단하게 기록을 이어갈 생각이다.
+With AI, you can generate a plausible long-form article in seconds, but a post generated that way is not my knowledge. I will restrict AI to a supporting tool for catching typos and logical gaps, and record only the thoughts I have personally experienced and digested. To keep the experiences and knowledge I create from vanishing into thin air, I intend to keep writing lightly, yet steadily.
 
 ---
 
@@ -67,4 +67,4 @@ AI를 활용하면 몇 초 만에 그럴듯한 장문의 글을 뽑아낼 수 �
 - [Building a Second Brain (Tiago Forte)](https://www.buildingasecondbrain.com/)
 - [Obsidian - Sharpen your thinking](https://obsidian.md)
 - [Zettelkasten Principles: Atomic Notes](https://zettelkasten.de/posts/principles-atomic-notes/)
-- [Separation of Concerns (SoC)](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%8B%AC%EC%82%AC_%EB%B6%84%EB%A6%AC)
+- [Separation of Concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns)
