@@ -308,6 +308,23 @@ def wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont
         words = raw_line.split(' ')
         current_line = ''
         for word in words:
+            # A single word wider than max_width: break it character-by-character (CJK friendly)
+            tmp = ImageDraw.Draw(Image.new('RGB', (8, 8)))
+            w_bbox = tmp.textbbox((0, 0), word, font=font)
+            if (w_bbox[2] - w_bbox[0]) > max_width and not current_line:
+                chunk = ''
+                for ch in word:
+                    test = chunk + ch
+                    bbox = draw.textbbox((0, 0), test, font=font)
+                    if (bbox[2] - bbox[0]) > max_width and chunk:
+                        lines.append(chunk)
+                        chunk = ch
+                    else:
+                        chunk = test
+                if chunk:
+                    lines.append(chunk)
+                continue
+
             test_line = f"{current_line} {word}".strip() if current_line else word
             bbox = draw.textbbox((0, 0), test_line, font=font)
             w = bbox[2] - bbox[0]
@@ -338,7 +355,9 @@ def create_post_image(
     vertical_align: str = "middle", # top | middle | bottom
     custom_width: Optional[int] = None,
     custom_height: Optional[int] = None,
-    scale: int = 1
+    scale: int = 1,
+    background: Optional[str] = None,
+    background_dim: float = 0.35
 ) -> Image.Image:
     """
     Generate a blog cover / thumbnail image.
@@ -361,6 +380,8 @@ def create_post_image(
         custom_width: Override width
         custom_height: Override height
         scale: Scale factor (1 = 1x, 2 = 2x Retina HD)
+        background: Optional photo path used as the background image (cover-cropped)
+        background_dim: Dark scrim intensity 0.0-1.0 applied on top of the photo for readability
     """
     preset_theme = THEME_PRESETS.get(theme, THEME_PRESETS['fed-meeting'])
     dim = PLATFORM_DIMENSIONS.get(platform, PLATFORM_DIMENSIONS['naver-header'])
@@ -373,7 +394,24 @@ def create_post_image(
     bg_colors = preset_theme.get('bg_colors', ['#3b0764', '#86198f', '#1e1b4b'])
     accent_hex = preset_theme.get('accent_color', '#c084fc')
 
-    if bg_type == 'mesh-aurora':
+    if background:
+        src_img = Image.open(background).convert('RGB')
+        sw, sh = src_img.size
+        target_ratio = width / height
+        src_ratio = sw / sh
+        # Cover-crop (center) the photo to the target aspect ratio
+        if src_ratio > target_ratio:
+            new_w = int(sh * target_ratio)
+            src_img = src_img.crop(((sw - new_w) // 2, 0, (sw - new_w) // 2 + new_w, sh))
+        else:
+            new_h = int(sw / target_ratio)
+            src_img = src_img.crop((0, (sh - new_h) // 2, sw, (sh - new_h) // 2 + new_h))
+        img = src_img.resize((width, height), Image.Resampling.LANCZOS).convert('RGBA')
+        if background_dim > 0:
+            dim_alpha = int(255 * min(1.0, background_dim))
+            dim_layer = Image.new('RGBA', (width, height), (0, 0, 0, dim_alpha))
+            img = Image.alpha_composite(img, dim_layer)
+    elif bg_type == 'mesh-aurora':
         img = render_mesh_aurora(width, height, bg_colors, accent_hex)
     elif bg_type == 'gradient-linear':
         img = render_linear_gradient(width, height, bg_colors, 135)
@@ -583,6 +621,8 @@ def main():
     parser.add_argument("--align", choices=["left", "center", "right"], default="left", help="Text alignment")
     parser.add_argument("--output", "-o", type=str, default="blog_cover.png", help="Output PNG file path")
     parser.add_argument("--scale", type=int, default=2, help="Scale multiplier (1=1x, 2=2x Retina)")
+    parser.add_argument("--background", type=str, default=None, help="Photo/image file to use as the background (cover-cropped to platform ratio)")
+    parser.add_argument("--background-dim", type=float, default=0.35, help="Dark scrim opacity 0.0-1.0 over the photo background (default 0.35)")
 
     args = parser.parse_args()
 
@@ -593,6 +633,7 @@ def main():
     print(f"  • Pattern: {args.pattern or 'theme default'}")
     print(f"  • Frame: {args.frame or 'theme default'}")
     print(f"  • Scale: {args.scale}x")
+    print(f"  • Background: {args.background or 'theme gradient'}")
 
     img = create_post_image(
         title=args.title,
@@ -607,7 +648,9 @@ def main():
         badge_bg=args.badge_bg,
         badge_text=args.badge_text,
         text_align=args.align,
-        scale=args.scale
+        scale=args.scale,
+        background=args.background,
+        background_dim=args.background_dim
     )
 
     img.save(args.output, "PNG")
